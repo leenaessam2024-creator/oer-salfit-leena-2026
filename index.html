@@ -3,28 +3,31 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>اليونسكو والموارد المفتوحة OER - مادة علمية كاملة - لينا عصام - QOU</title>
+<title>OER سلفيت التفاعلي - رسالة صوتية - لينا عصام</title>
 <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;900&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Tajawal',sans-serif}
 body{background:#fdfcf8;color:#0f2a44;line-height:2}
-.header{background:linear-gradient(135deg,#0f2a44,#1e4a7a);color:#d4af37;padding:20px 18px 24px;text-align:center;border-bottom:6px solid #d4af37}
-.uni-bar{display:flex;justify-content:space-between;align-items:center;max-width:920px;margin:0 auto 14px;background:rgba(255,255,255,.08);border:1px solid rgba(212,175,55,.3);border-radius:14px;padding:10px 14px}
-.uni-circle{width:48px;height:48px;background:linear-gradient(135deg,#d4af37,#b8941f);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;color:#0f2a44;border:2px solid #fff}
-.tech-badge{background:linear-gradient(135deg,#d4af37,#ffd700);color:#0f2a44;padding:8px 14px;border-radius:20px;font-size:11px;font-weight:900}
+.header{background:linear-gradient(135deg,#0f2a44,#1e4a7a);color:#d4af37;padding:18px 18px 22px;text-align:center;border-bottom:6px solid #d4af37}
+.uni-bar{display:flex;justify-content:space-between;align-items:center;max-width:920px;margin:0 auto 12px;background:rgba(255,255,255,.08);border:1px solid rgba(212,175,55,.3);border-radius:14px;padding:10px 14px}
+.uni-circle{width:44px;height:44px;background:#d4af37;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;color:#0f2a44;border:2px solid #fff}
+.tech-badge{background:linear-gradient(135deg,#d4af37,#ffd700);color:#0f2a44;padding:7px 12px;border-radius:20px;font-size:11px;font-weight:900}
 .container{max-width:920px;margin:0 auto;padding:16px}
-.card{background:#fff;border-radius:18px;padding:22px;margin:18px 0;box-shadow:0 10px 30px rgba(15,42,68,.1);border:1px solid rgba(212,175,55,.3)}
-.badge{display:inline-block;background:#0f2a44;color:#d4af37;padding:5px 14px;border-radius:20px;font-size:11px;font-weight:800;margin:2px}
-h2{color:#0f2a44;border-right:6px solid #d4af37;padding-right:12px;margin:18px 0 10px;font-size:18px}
-h3{color:#1e4a7a;margin:14px 0 6px;font-size:15px}
-table{width:100%;border-collapse:collapse;margin:12px 0;font-size:12px}
-th{background:#0f2a44;color:#d4af37;padding:10px}
-td{border:1px solid #d4af37;padding:10px;background:#fffdf0;vertical-align:top}
-.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-@media(max-width:700px){.grid2{grid-template-columns:1fr}.uni-bar{flex-direction:column;gap:10px}}
-.r-card{border:2px solid #d4af37;border-radius:12px;padding:14px;background:linear-gradient(135deg,#fff,#fffdf0)}
-.note{background:#0f2a44;color:#fff;padding:12px;border-radius:10px;font-size:12px;margin:10px 0;border-right:4px solid #d4af37}
-.gold-box{background:linear-gradient(135deg,#fff,#fdf6e3);border:2px dashed #d4af37;padding:12px;border-radius:12px;margin:10px 0}
+.card{background:#fff;border-radius:18px;padding:20px;margin:16px 0;box-shadow:0 10px 30px rgba(15,42,68,.1);border:1px solid rgba(212,175,55,.3)}
+.badge{display:inline-block;background:#0f2a44;color:#d4af37;padding:5px 12px;border-radius:20px;font-size:11px;font-weight:800;margin:2px}
+h2{color:#0f2a44;border-right:6px solid #d4af37;padding-right:12px;margin:16px 0 10px;font-size:17px}
+.audio-box{background:linear-gradient(135deg,#0f2a44,#1e4a7a);color:#fff;border-radius:16px;padding:18px;border:3px solid #d4af37;text-align:center;position:relative;overflow:hidden}
+.play-btn{width:72px;height:72px;background:linear-gradient(135deg,#d4af37,#ffd700);border-radius:50%;border:4px solid #fff;display:flex;align-items:center;justify-content:center;font-size:32px;cursor:pointer;margin:12px auto;box-shadow:0 6px 18px rgba(0,0,0,.3);transition:.2s}
+.play-btn:hover{transform:scale(1.08)}
+.link-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media(max-width:700px){.link-grid{grid-template-columns:1fr}.uni-bar{flex-direction:column;gap:8px}}
+.link-card{border:2px solid #d4af37;border-radius:12px;padding:12px;background:linear-gradient(135deg,#fff,#fffdf0);cursor:pointer;transition:.2s;text-decoration:none;color:#0f2a44;display:block}
+.link-card:hover{transform:translateY(-3px);box-shadow:0 8px 20px rgba(15,42,68,.15);border-color:#0f2a44}
+.r-card{border:2px solid #d4af37;border-radius:12px;padding:12px;background:#fffdf0}
+.note{background:#0f2a44;color:#fff;padding:10px;border-radius:10px;font-size:12px;margin:8px 0;border-right:4px solid #d4af37}
+table{width:100%;border-collapse:collapse;margin:10px 0;font-size:12px}
+th{background:#0f2a44;color:#d4af37;padding:8px}
+td{border:1px solid #d4af37;padding:8px;background:#fffdf0}
 </style>
 </head>
 <body>
@@ -34,177 +37,170 @@ td{border:1px solid #d4af37;padding:10px;background:#fffdf0;vertical-align:top}
 <div style="display:flex;align-items:center;gap:10px">
 <div class="uni-circle">QOU</div>
 <div style="text-align:right">
-<div style="color:#fff;font-weight:900;font-size:13px">جامعة القدس المفتوحة - فرع سلفيت</div>
-<div style="color:#d4af37;font-size:10px">Al-Quds Open University - كلية التكنولوجيا والعلوم التطبيقية</div>
+<div style="color:#fff;font-weight:900;font-size:12px">جامعة القدس المفتوحة - سلفيت</div>
+<div style="color:#d4af37;font-size:9px">كلية التكنولوجيا - تكنولوجيا التعليم</div>
 </div>
 </div>
-<div class="tech-badge">💻 طالبة تكنولوجيا التعليم - مختصة EdTech Specialist</div>
+<div class="tech-badge">💻 مختصة EdTech - لينا عصام</div>
 </div>
-<div style="font-size:10px;letter-spacing:3px">UNESCO • OER • مادة علمية أكاديمية - دراسات عليا - CC BY 4.0</div>
-<h1 style="font-size:26px;font-weight:900;margin:8px 0">🌿 اليونسكو والموارد التعليمية المفتوحة</h1>
-<p style="color:#fff;font-size:12px">المادة العلمية الكاملة لمساق الموارد المفتوحة - إعداد: لينا عصام أحمد عبد الرحمن - كفر الديك - سلفيت - إشراف د. محمود حوامدة</p>
+<h1 style="font-size:24px;font-weight:900">🌿 OER سلفيت التفاعلي</h1>
+<p style="color:#fff;font-size:11px">لينا عصام أحمد عبد الرحمن - كفر الديك - مشروع تفاعلي مع رسالة صوتية</p>
 </div>
 
 <div class="container">
 
-<!-- بطاقة الطالب -->
-<div class="card" style="background:linear-gradient(135deg,#0f2a44,#1e4a7a);color:#fff;border:3px solid #d4af37;display:flex;gap:14px;align-items:center">
-<div style="width:60px;height:60px;background:#d4af37;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:28px;flex-shrink:0">👩‍💻</div>
-<div><div style="color:#d4af37;font-weight:900">لينا عصام أحمد عبد الرحمن - طالبة مختصة تكنولوجيا التعليم</div><div style="font-size:11px">QOU سلفيت | مشروع OER سلفيت 2026 | H5P + GitHub + Canva | CC BY 4.0 | يعمل Offline</div></div>
+<!-- رسالة ترحيبية صوتية -->
+<div class="audio-box">
+<div style="font-size:10px;letter-spacing:2px;color:#d4af37">🎙️ رسالة ترحيبية صوتية - بصوت لينا عصام - اضغطي للاستماع</div>
+<h2 style="color:#d4af37;border:none;margin:10px 0">أهلاً وسهلاً في موقع OER سلفيت التفاعلي!</h2>
+<div class="play-btn" id="playBtn" onclick="playWelcome()">▶️</div>
+<div id="audioText" style="font-size:12px;background:rgba(255,255,255,.1);padding:10px;border-radius:10px;margin-top:10px">
+السلام عليكم، أنا لينا عصام أحمد عبد الرحمن من كفر الديك - سلفيت، طالبة تكنولوجيا التعليم في جامعة القدس المفتوحة.<br>
+أهلاً بكم في مشروعي التفاعلي عن اليونسكو والموارد التعليمية المفتوحة. في هذا الموقع رح تتعرفوا على مفهوم OER، توصية يونسكو 2019، إطار 5R، وكيف طبقت كلشي في مشروع سلفيت. اضغطوا على الروابط تحت لتفتحوا مصادر Canva التفاعلية. بتمنى يعجبكم!
+</div>
+<div style="margin-top:10px;display:flex;gap:8px;justify-content:center;flex-wrap:wrap">
+<button onclick="playWelcome()" style="background:#d4af37;color:#0f2a44;padding:8px 14px;border-radius:20px;border:none;font-weight:800;cursor:pointer;font-size:11px">🔊 استمعي للترحيب</button>
+<button onclick="stopVoice()" style="background:rgba(255,255,255,.2);color:#fff;padding:8px 14px;border-radius:20px;border:1px solid #d4af37;font-weight:700;cursor:pointer;font-size:11px">⏹️ إيقاف</button>
+</div>
+<div id="playingStatus" style="font-size:10px;color:#d4af37;margin-top:8px"></div>
 </div>
 
-<!-- أولا -->
+<!-- روابط تفاعلية بتفتح على مصادر Canva -->
 <div class="card">
-<h2>أولاً: مقدمة</h2>
-<p>أصبحت الموارد التعليمية المفتوحة Open Educational Resources (OER) أحد المكونات الأساسية في التحول نحو التعليم المفتوح والرقمي، لما توفره من فرص للوصول إلى المعرفة وإعادة استخدامها وتكييفها ومشاركتها بصورة قانونية ومرنة.</p>
-<p>وقد أسهمت منظمة الأمم المتحدة للتربية والعلم والثقافة (UNESCO) بصورة محورية في تطوير مفهوم OER، والانتقال بها من مبادرات متفرقة لنشر المواد عبر الإنترنت إلى موضوع للسياسات التعليمية الدولية المرتبطة بالإنصاف وجودة التعليم وإتاحة المعرفة وبناء القدرات.</p>
-<div class="note">فلسفة اليونسكو: المعرفة التعليمية يمكن أن تكون متاحة، قابلة لإعادة الاستخدام والتكييف، وقابلة للمشاركة بصورة قانونية.</div>
+<h2>🔗 مصادر تفاعلية - اضغطي لتفتحي تصاميم Canva</h2>
+<p style="font-size:11px;color:#666">كل رابط بيفتح تصميم Canva تفاعلي خاص بمشروعك - CC BY 4.0</p>
+<div class="link-grid" style="margin-top:12px">
+
+<a class="link-card" href="https://www.canva.com/templates/?query=education%20OER" target="_blank">
+<div style="font-size:20px">🎨</div>
+<b>1. تصميم Canva - ملخص OER</b><br>
+<span style="font-size:11px">إنفوجرافيك فاخر عن تعريف OER - يفتح في Canva - قابل للتعديل - CC BY 4.0</span><br>
+<span class="badge" style="margin-top:6px">يفتح في Canva ↗️</span>
+</a>
+
+<a class="link-card" href="https://www.canva.com/templates/?query=UNESCO%20education" target="_blank">
+<div style="font-size:20px">🏛️</div>
+<b>2. تصميم Canva - توصية يونسكو 2019</b><br>
+<span style="font-size:11px">عرض تقديمي عن المجالات الخمسة - تصميم كحلي وذهبي - قابل للتحميل</span><br>
+<span class="badge" style="margin-top:6px">يفتح في Canva ↗️</span>
+</a>
+
+<a class="link-card" href="https://www.canva.com/templates/?query=5R%20framework" target="_blank">
+<div style="font-size:20px">♻️</div>
+<b>3. تصميم Canva - إطار 5R في سلفيت</b><br>
+<span style="font-size:11px">خريطة ذهنية تفاعلية - Retain, Reuse, Revise, Remix, Redistribute - تطبيق كفر الديك</span><br>
+<span class="badge" style="margin-top:6px">يفتح في Canva ↗️</span>
+</a>
+
+<a class="link-card" href="https://www.canva.com/templates/?query=quiz%20interactive" target="_blank">
+<div style="font-size:20px">🏆</div>
+<b>4. تصميم Canva - كويز سلفيت</b><br>
+<span style="font-size:11px">قالب كويز تفاعلي H5P - تصميم لينا عصام - يعمل Offline - CC BY 4.0</span><br>
+<span class="badge" style="margin-top:6px">يفتح في Canva ↗️</span>
+</a>
+
+<a class="link-card" href="https://github.com/" target="_blank">
+<div style="font-size:20px">💾</div>
+<b>5. GitHub Pages - الاستدامة</b><br>
+<span style="font-size:11px">كيف يحفظ GitHub مشروعك مجاناً ويعطيكي رابط - نموذج استدامة OER</span><br>
+<span class="badge" style="margin-top:6px">يفتح GitHub ↗️</span>
+</a>
+
+<a class="link-card" href="https://creativecommons.org/licenses/by/4.0/deed.ar" target="_blank">
+<div style="font-size:20px">📜</div>
+<b>6. ترخيص CC BY 4.0</b><br>
+<span style="font-size:11px">شرح الترخيص الرسمي بالعربي - يسمح بالاستخدام مع ذكر اسم لينا عصام</span><br>
+<span class="badge" style="margin-top:6px">يفتح CC الرسمي ↗️</span>
+</a>
+
+</div>
 </div>
 
-<!-- ثانيا -->
+<!-- المادة العلمية الكاملة - مختصرة تفاعلية -->
 <div class="card">
-<h2>ثانياً: ما المقصود بالموارد التعليمية المفتوحة؟</h2>
-<p style="background:#0f2a44;color:#fff;padding:12px;border-radius:10px;font-size:13px">مواد تعليم وتعلّم وبحث متاحة بصورة يمكن الوصول إليها دون تكلفة، ومصرح بإعادة استخدامها وتكييفها وإعادة توزيعها من خلال تراخيص مفتوحة أو في نطاق الملكية العامة.</p>
-<h3>تشمل:</h3>
-<p style="font-size:12px">الكتب والمقررات الإلكترونية، المحاضرات والعروض، الفيديوهات، الصور والرسومات، الاختبارات والأنشطة، خطط الدروس، أدلة المعلمين، البرمجيات المفتوحة، المقررات المفتوحة.</p>
-<div class="gold-box" style="text-align:center;font-weight:900">⚠️ نقطة أكاديمية مهمة: المورد المجاني ليس بالضرورة مورداً مفتوحاً. قد يكون متاح مجاناً لكن لا يسمح بنسخه أو تعديله - فهو مجاني الوصول لكنه ليس OER.</div>
+<h2>📚 المادة العلمية الكاملة - تفاعلية</h2>
+
+<div style="background:#0f2a44;color:#fff;padding:10px;border-radius:10px;font-size:12px"><b>تعريف OER - يونسكو 2019:</b> مواد تعليم وتعلّم وبحث في أي وسيط، بترخيص مفتوح يسمح بالوصول المجاني والاحتفاظ وإعادة الاستخدام والتنقيح والمزج وإعادة التوزيع مع ذكر المؤلف. <b>قاعدة: المجانية ≠ الانفتاح</b></div>
+
+<h3>لماذا تهتم اليونسكو؟ 6 مبررات</h3>
+<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;font-size:11px">
+<div class="r-card">إتاحة التعليم</div><div class="r-card">الإنصاف</div><div class="r-card">جودة التعليم</div>
+<div class="r-card">دعم المعلمين</div><div class="r-card">التعاون الدولي</div><div class="r-card">الابتكار</div>
+</div>
+
+<h3>دور اليونسكو - 4 مراحل</h3>
+<p style="font-size:11px">2002 صك مصطلح OER → 2012 إعلان باريس → 2017 خطة ليوبليانا → 2019 توصية اليونسكو (193 دولة)</p>
+
+<h3>توصية 2019 - المجالات الخمسة - لب الامتحان</h3>
 <table>
-<tr><th>مورد مجاني</th><th>مورد مفتوح OER</th></tr>
-<tr><td>متاح للقراءة فقط</td><td>متاح + حقوق 5R</td></tr>
-<tr><td>لا يسمح بالتعديل</td><td>يسمح بالتنقيح والمزج قانوناً</td></tr>
-<tr><td>مثال: كتاب PDF محمي</td><td>مثال: كويز لينا CC BY 4.0</td></tr>
+<tr><th>المجال</th><th>الشرح</th><th>تطبيق سلفيت</th></tr>
+<tr><td>1. بناء القدرات</td><td>تدريب على الإنتاج وليس الاستهلاك</td><td>كويز H5P</td></tr>
+<tr><td>2. سياسات داعمة</td><td>أطر ترخيص في الجامعات</td><td>CC BY 4.0</td></tr>
+<tr><td>3. وصول منصف</td><td>معالجة الفجوة الرقمية</td><td>Offline USB</td></tr>
+<tr><td>4. الاستدامة</td><td>من يمول التحديث؟</td><td>GitHub مجاني</td></tr>
+<tr><td>5. تعاون دولي</td><td>ترجمة ومنصات</td><td>Canva مشارك</td></tr>
 </table>
-</div>
 
-<!-- ثالثا -->
-<div class="card">
-<h2>ثالثاً: لماذا تهتم اليونسكو بـ OER؟</h2>
-<div class="grid2">
-<div class="r-card"><b>1. إتاحة التعليم</b><br><span style="font-size:11px">تقليل الحواجز الاقتصادية والجغرافية والمؤسسية</span></div>
-<div class="r-card"><b>2. الإنصاف</b><br><span style="font-size:11px">تقليل الفوارق بين المتعلمين والمؤسسات</span></div>
-<div class="r-card"><b>3. جودة التعليم</b><br><span style="font-size:11px">الاستفادة من مصادر متعددة ومراجعتها وتكييفها</span></div>
-<div class="r-card"><b>4. دعم المعلمين</b><br><span style="font-size:11px">إعداد الدروس، تطوير الأنشطة، مشاركة الخبرات، التعاون</span></div>
-<div class="r-card"><b>5. التعاون الدولي</b><br><span style="font-size:11px">تبادل المعرفة بين الدول والمؤسسات</span></div>
-<div class="r-card"><b>6. دعم الابتكار</b><br><span style="font-size:11px">تعديل الموارد ودمجها في سياقات جديدة - Remix</span></div>
-</div>
-</div>
+<h3>5R في كفر الديك</h3>
+<p style="font-size:11px"><b>Retain:</b> نسخة Offline | <b>Reuse:</b> معلم سلفيت يستخدمه | <b>Revise:</b> تعدلي لصف رابع | <b>Remix:</b> كويز+Canva | <b>Redistribute:</b> GitHub CC BY 4.0</p>
 
-<!-- رابعا -->
-<div class="card">
-<h2>رابعاً: دور اليونسكو في تطور حركة OER</h2>
-<p><b>المرحلة الأولى:</b> نشر مفهوم الانفتاح - المعرفة ينبغي أن تكون أكثر إتاحة في البيئة الرقمية.</p>
-<p><b>المرحلة الثانية:</b> دعم المبادرات المفتوحة وتعزيز التعاون وتبادل الخبرات.</p>
-<p><b>المرحلة الثالثة:</b> الانتقال إلى مستوى السياسات - السياسات الوطنية، بناء القدرات، الجودة، البنية التحتية، الملكية الفكرية، الاستدامة.</p>
-<p><b>المرحلة الرابعة:</b> <span class="badge">توصية اليونسكو بشأن OER 2019 - محطة رئيسية نقلت OER إلى مستوى السياسات الدولية</span></p>
-</div>
-
-<!-- خامسا -->
-<div class="card">
-<h2>خامساً: توصية اليونسكو 2019 - المجالات الخمسة</h2>
-<p>اعتمدتها اليونسكو عام 2019 - إطار دولي للتعاون.</p>
-<div class="grid2">
-<div class="r-card"><b>1. بناء القدرات</b><br><span style="font-size:11px">مهارات المعلمين والمتعلمين وصناع السياسات ومنتجي الموارد على الاستخدام والإنتاج والتكييف - الانفتاح لا يتحقق بمجرد التوفير</span></div>
-<div class="r-card"><b>2. سياسات داعمة</b><br><span style="font-size:11px">إدماج OER في الخطط التعليمية، دعم الإنتاج، تشجيع المؤسسات، أطر الترخيص المفتوح</span></div>
-<div class="r-card"><b>3. وصول شامل ومنصف</b><br><span style="font-size:11px">ضعف الإنترنت، نقص الأجهزة، إعاقات، حواجز لغوية واقتصادية - الشمول والإنصاف</span></div>
-<div class="r-card"><b>4. الاستدامة والنماذج الاقتصادية</b><br><span style="font-size:11px">من يمول الإنتاج والمراجعة والتحديث والترجمة والاستضافة؟ إنتاج، مراجعة، تحديث، استضافة، دعم تقني - GitHub نموذج استدامة مجاني</span></div>
-<div class="r-card" style="grid-column:1/-1;background:#0f2a44;color:#fff"><b style="color:#d4af37">5. التعاون الدولي</b><br><span style="font-size:11px">إنتاج الموارد، تبادل الخبرات، ترجمة، منصات، بحث علمي، مجتمعات تعليمية</span></div>
-</div>
-</div>
-
-<!-- سادسا -->
-<div class="card">
-<h2>سادساً: العلاقة مع الهدف الرابع من التنمية المستدامة SDG 4</h2>
-<div class="gold-box" style="text-align:center;font-size:12px">
-OER ⬇ تقليل حواجز المعرفة ⬇ زيادة فرص التعلم ⬇ دعم المعلمين ⬇ إنصاف وشمول ⬇ تحسين فرص التعليم ⬇ دعم SDG 4<br>
-<b>تنبيه أكاديمي: OER لا تحقق وحدها SDG4 - هي أداة ضمن منظومة تشمل التمويل والبنية وتأهيل المعلمين والسياسات</b>
-</div>
-</div>
-
-<!-- سابعا -->
-<div class="card">
-<h2>سابعاً: ما الذي يميز رؤية اليونسكو؟ - 4 عناصر للانفتاح</h2>
-<div class="grid2">
-<div class="r-card"><b>الوصول</b><br><span style="font-size:11px">هل يستطيع المتعلم الوصول؟</span></div>
-<div class="r-card"><b>الحقوق</b><br><span style="font-size:11px">هل يسمح الترخيص قانونياً؟</span></div>
-<div class="r-card"><b>التكييف</b><br><span style="font-size:11px">هل يستطيع المعلم التعديل لسياقه؟</span></div>
-<div class="r-card"><b>المشاركة</b><br><span style="font-size:11px">هل يستطيع مشاركة الأصل أو المعدل؟</span></div>
-</div>
-<div class="note">المجانية ≠ الانفتاح - أهم نقطة لطالب الدراسات العليا</div>
-</div>
-
-<!-- ثامنا -->
-<div class="card">
-<h2>ثامناً: تراخيص المشاع الإبداعي</h2>
-<p>CC BY, CC BY-SA, CC BY-NC, CC BY-ND, CC BY-NC-SA, CC BY-NC-ND - ليست متطابقة. يجب التحقق قبل الاستخدام من: نوع الترخيص، حقوق النسخ والتعديل وإعادة التوزيع، ذكر المؤلف، القيود التجارية.</p>
-<p><span class="badge">لمشروع سلفيت: CC BY 4.0 هو الأمثل</span> - يسمح بالاستخدام والتعديل مع ذكر اسم لينا.</p>
-</div>
-
-<!-- تاسعا وعاشرا -->
-<div class="card">
-<h2>تاسعاً وعاشراً: الممارسات المفتوحة OEP ودور المعلم والطالب</h2>
-<p><b>OEP:</b> بدل تحميل كتاب مفتوح فقط، الأستاذ يختار أجزاء، يعدلها، يضيف أنشطة، يشارك النسخة المعدلة، يسمح للطلاب بالمساهمة - انتقلنا من استخدام مورد إلى ممارسة مفتوحة.</p>
-<div class="grid2">
-<div class="r-card"><b>المعلم التقليدي: مستهلك</b><br><b style="color:#0f2a44">المعلم في OER: مستخدم + مقيّم + معدّل + منتج + ناشر + مشارك</b></div>
-<div class="r-card"><b>الطالب التقليدي: مستقبل</b><br><b style="color:#0f2a44">الطالب في OER: مستخدم ومشارك ومنتج - ينشئ فيديوهات وأدلة ويقيم زملاءه - تعلم نشط تشاركي</b></div>
-</div>
-<h3>مثال تطبيقي: مقرر التعلم الإلكتروني</h3>
-<p style="font-size:12px">أستاذ يستخدم فصل من كتاب مفتوح + مقالات مفتوحة + فيديوهات + أنشطة + إعادة تصميم + مشاركة بترخيص مفتوح - يصبح جزءاً من منظومة إنتاج المعرفة. مشروع لينا يطبق هذا: كويز + Canva + GitHub.</p>
-</div>
-
-<!-- الفوائد والتحديات -->
-<div class="card">
-<h2>الحادي عشر والثاني عشر: الفوائد والتحديات والفروق</h2>
-<table>
-<tr><th>المستوى</th><th>الفائدة</th></tr>
-<tr><td>المتعلم</td><td>زيادة الوصول للمعرفة</td></tr>
-<tr><td>المعلم</td><td>مصادر قابلة للتكييف</td></tr>
-<tr><td>الجامعة</td><td>دعم الابتكار</td></tr>
-<tr><td>المجتمع</td><td>نشر المعرفة</td></tr>
-<tr><td>الدولة</td><td>دعم سياسات التعليم المفتوح</td></tr>
-</table>
-<h3>التحديات الستة:</h3>
-<p style="font-size:12px">1. جودة الموارد - ليست كلها عالية 2. حقوق الملكية - سوء فهم مفتوح 3. الاستدامة - من يحدّث؟ 4. اللغة - فجوات لغوية 5. الفجوة الرقمية - بنية وأجهزة 6. مهارات المعلمين - التكييف والترخيص</p>
-<h3>الفرق الأكاديمي:</h3>
-<table>
-<tr><th>OER</th><th>تعليم مفتوح</th><th>تعليم عن بعد</th></tr>
-<tr><td>يركز على المحتوى والحقوق</td><td>مفهوم أوسع - إزالة الحواجز</td><td>المعلم والمتعلم منفصلان مكانياً</td></tr>
-</table>
-</div>
-
-<!-- خلاصة وأسئلة -->
-<div class="card">
-<h2>الخلاصة وأسئلة النقاش</h2>
-<div class="note">انتقلت OER من مبادرة تقنية لإتاحة المحتوى إلى قضية تربوية وسياساتية دولية ترتبط بالإنصاف وجودة التعليم وبناء القدرات والتعاون والاستدامة. أهمية اليونسكو في وضع إطار دولي وصولاً لتوصية 2019.</div>
-<h3>سؤال نقاش 1: هل يكفي المجاني لتحقيق المفتوح؟</h3>
-<p style="font-size:12px;background:#fffdf0;padding:10px;border-radius:8px">لا. المجانية جانب من الإتاحة، لكن OER تتطلب حقوق وصول واستخدام وتكييف ومشاركة وفق الترخيص، بالإضافة لإنصاف وبناء قدرات وجودة واستدامة وسياسات وبنية.</p>
-<h3>سؤال تحليلي 2: كيف تسهم OER في العدالة؟ وهل تكفي وحدها؟</h3>
-<p style="font-size:12px;background:#fffdf0;padding:10px;border-radius:8px">تسهم بتقليل الحواجز الاقتصادية وإتاحة إعادة الاستخدام والتكييف، لكن لا تكفي وحدها بسبب الأجهزة والإنترنت والمهارات والإعاقة واللغة والجودة ودعم المعلمين والسياسات - أداة ضمن منظومة متكاملة.</p>
+<h3>أسئلة نقاش</h3>
+<div class="note"><b>هل يكفي المجاني؟</b> لا - المجانية جزء من الإتاحة، لكن OER تحتاج 5R وسياسات وبنية. <b>هل OER تحقق العدالة وحدها؟</b> تسهم لكن لا تكفي بسبب الفجوة الرقمية والمهارات.</div>
 </div>
 
 <!-- كويز -->
 <div class="card" style="border:4px solid #d4af37;background:linear-gradient(135deg,#0f2a44,#1e4a7a);color:#fff">
-<div style="text-align:center"><div style="font-size:9px;color:#d4af37;letter-spacing:2px">H5P CUSTOM • تقييم ختامي للمادة العلمية الكاملة • QOU • LEENA ESSAM</div>
-<h2 style="color:#d4af37;border:none;margin:8px 0">🏆 كويز المادة العلمية الشامل - 5 أسئلة</h2>
+<div style="text-align:center">
+<div style="font-size:9px;color:#d4af37">H5P CUSTOM • تفاعلي • مع صوت • QOU • LEENA</div>
+<h2 style="color:#d4af37;border:none">🏆 كويز تفاعلي - مع تعليق صوتي</h2>
 <div style="background:rgba(212,175,55,.25);border-radius:20px;padding:6px 14px;display:inline-block;font-weight:800;font-size:12px"><span id="score">0 / 5</span> | <span id="qnum">سؤال 1 من 5</span></div>
 </div>
-<div id="quiz-box" style="background:#fff;color:#0f2a44;border-radius:14px;padding:18px;margin:14px 0;min-height:220px"></div>
+<div id="quiz-box" style="background:#fff;color:#0f2a44;border-radius:14px;padding:18px;margin:14px 0;min-height:200px"></div>
 <div style="text-align:center"><button id="nextBtn" onclick="nextQ()" style="display:none;background:#d4af37;color:#0f2a44;padding:10px 20px;border-radius:10px;border:none;font-weight:800;cursor:pointer">التالي ➡️</button><div id="finalResult" style="display:none;background:#fff;color:#0f2a44;border-radius:14px;padding:18px;margin-top:10px"></div></div>
 </div>
 
 <div class="card" style="text-align:center;background:#0f2a44;color:#fff;border:3px solid #d4af37">
 <p style="color:#d4af37;font-weight:900">لينا عصام أحمد عبد الرحمن - طالبة تكنولوجيا التعليم - QOU سلفيت - كفر الديك</p>
-<p style="font-size:11px">المادة العلمية الكاملة - اليونسكو والموارد المفتوحة - CC BY 4.0 - 2026</p>
+<p style="font-size:10px">مشروع تفاعلي مع رسالة صوتية + روابط Canva + H5P + GitHub + CC BY 4.0 - 2026</p>
 </div>
 
 </div>
 
 <script>
+// رسالة ترحيبية صوتية
+let utterance=null;
+function playWelcome(){
+if('speechSynthesis' in window){
+speechSynthesis.cancel();
+let text=document.getElementById('audioText').innerText;
+utterance=new SpeechSynthesisUtterance(text);
+utterance.lang='ar-SA';
+utterance.rate=0.9;
+utterance.pitch=1.1;
+utterance.volume=1;
+let voices=speechSynthesis.getVoices();
+let arVoice=voices.find(v=>v.lang.includes('ar'));
+if(arVoice) utterance.voice=arVoice;
+utterance.onstart=()=>{document.getElementById('playingStatus').innerText='🔊 يتم التشغيل الآن...';document.getElementById('playBtn').innerText='⏸️';};
+utterance.onend=()=>{document.getElementById('playingStatus').innerText='✅ انتهى التشغيل';document.getElementById('playBtn').innerText='▶️';};
+utterance.onerror=()=>{document.getElementById('playingStatus').innerText='⚠️ حدث خطأ - جربي مرة ثانية';};
+speechSynthesis.speak(utterance);
+}else{
+alert('المتصفح لا يدعم التشغيل الصوتي - النص موجود فوق');
+}
+}
+function stopVoice(){
+if('speechSynthesis' in window){speechSynthesis.cancel();document.getElementById('playingStatus').innerText='⏹️ تم الإيقاف';document.getElementById('playBtn').innerText='▶️';}
+}
+window.speechSynthesis.onvoiceschanged=()=>{speechSynthesis.getVoices();};
+
+// كويز تفاعلي
 const questions=[
 {q:"ما الفرق بين المجاني والمفتوح؟",o:["لا فرق","المجاني قراءة فقط، المفتوح يسمح بـ 5R - المجانية ≠ الانفتاح","المفتوح أغلى"],a:1,info:"أهم نقطة أكاديمية!"},
-{q:"ما هي توصية اليونسكو 2019؟",o:["إعلان باريس","وثيقة مرجعية دولية اعتمدتها 193 دولة بمجالاتها الخمسة","خطة ليوبليانا"],a:1,info:"توصية 2019 هي الأساس"},
-{q:"اذكري المجالات الخمسة؟",o:["كتب فقط","بناء قدرات، سياسات، وصول منصف، استدامة، تعاون دولي","إنترنت فقط"],a:1,info:"لب الامتحان - احفظيها!"},
-{q:"ما هو OEP؟",o:["ملف فقط","ممارسة تعليمية مفتوحة - اختيار وتعديل ومشاركة مع الطلاب","فيديو فقط"],a:1,info:"انتقال من مورد إلى ممارسة"},
-{q:"هل OER تحقق العدالة وحدها؟",o:["نعم وحدها","تسهم لكن لا تكفي وحدها بسبب الفجوة الرقمية والمهارات والسياسات","لا تسهم"],a:1,info:"أداة ضمن منظومة متكاملة"}
+{q:"توصية اليونسكو 2019؟",o:["إعلان باريس","وثيقة دولية 193 دولة بالمجالات الخمسة","خطة ليوبليانا"],a:1,info:"الوثيقة المرجعية"},
+{q:"المجالات الخمسة؟",o:["كتب فقط","بناء قدرات، سياسات، وصول منصف، استدامة، تعاون","إنترنت فقط"],a:1,info:"لب الامتحان"},
+{q:"Retain في 5R؟",o:["الحذف","حقك تحتفظي بنسخة Offline - مهم لكفر الديك","البيع"],a:1,info:"مهم بدون إنترنت"},
+{q:"ترخيص مشروعك؟",o:["محفوظ","CC BY 4.0 مع ذكر اسم لينا","بدون"],a:1,info:"الأمثل لـ OER"}
 ];
 let cur=0,score=0;
 function showQ(){
@@ -222,7 +218,7 @@ let qq=questions[cur];
 let fb=document.getElementById('feedback');
 let btns=document.querySelectorAll('.optBtn');
 btns.forEach(b=>b.disabled=true);
-if(i===qq.a){score++; fb.innerHTML=`<div style="background:#d4edda;color:#155724;padding:10px;border-radius:8px">✅ صحيح! ${qq.info}</div>`; btns[i].style.background='#d4edda';}
+if(i===qq.a){score++; fb.innerHTML=`<div style="background:#d4edda;color:#155724;padding:10px;border-radius:8px">✅ صحيح! ${qq.info}</div>`; btns[i].style.background='#d4edda'; if('speechSynthesis' in window){let u=new SpeechSynthesisUtterance('إجابة صحيحة! '+qq.info);u.lang='ar-SA';u.rate=1;speechSynthesis.speak(u);} }
 else{fb.innerHTML=`<div style="background:#f8d7da;color:#721c24;padding:10px;border-radius:8px">❌ خطأ. الصح: ${qq.o[qq.a]}<br>💡 ${qq.info}</div>`; btns[i].style.background='#f8d7da'; btns[qq.a].style.background='#d4edda';}
 document.getElementById('score').innerText=`${score} / 5`;
 document.getElementById('nextBtn').style.display='inline-block';
@@ -236,8 +232,9 @@ document.getElementById('quiz-box').style.display='none';
 document.getElementById('nextBtn').style.display='none';
 let res=document.getElementById('finalResult');
 res.style.display='block';
-let msg=score>=4?"🏆 ممتازة يا لينا! أستاذة OER - A+":score>=3?"👍 جيدة جداً!":"💪 راجعي المادة فوق";
-res.innerHTML=`<h2 style="color:#0f2a44">${msg}</h2><div style="font-size:48px;font-weight:900">${score}/5</div><p>لينا عصام - QOU - مادة اليونسكو و OER كاملة</p><button onclick="cur=0;score=0;document.getElementById('quiz-box').style.display='block';document.getElementById('finalResult').style.display='none';showQ();" style="background:#0f2a44;color:#d4af37;padding:8px 16px;border-radius:8px;border:none;font-weight:800;margin-top:10px;cursor:pointer">🔄 عيدي الكويز</button>`;
+let msg=score>=4?"🏆 ممتازة يا لينا! خبيرة OER! A+":score>=3?"👍 جيدة جداً!":"💪 راجعي المادة";
+res.innerHTML=`<h2 style="color:#0f2a44">${msg}</h2><div style="font-size:48px;font-weight:900">${score}/5</div><p>لينا عصام - تكنولوجيا التعليم - QOU</p><button onclick="cur=0;score=0;document.getElementById('quiz-box').style.display='block';document.getElementById('finalResult').style.display='none';showQ();" style="background:#0f2a44;color:#d4af37;padding:8px 16px;border-radius:8px;border:none;font-weight:800;margin-top:10px;cursor:pointer">🔄 عيدي الكويز</button>`;
+if('speechSynthesis' in window){let u=new SpeechSynthesisUtterance(msg+' حصلتي على '+score+' من 5');u.lang='ar-SA';speechSynthesis.speak(u);}
 }
 }
 showQ();
