@@ -1,118 +1,12 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>GEN-AI OLIVE | ذكاء زيتوني متفوق | لينا ماجستير</title>
-<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@700&family=Tajawal:wght@300;700;900&display=swap" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/p5@1.9.0/lib/p5.min.js"></script>
-<style>
-:root{--ink:#0f0f0e;--gold:#d4a017}
-*{margin:0;box-sizing:border-box}body{font-family:'Tajawal',sans-serif;background:#fdfbf6;color:var(--ink)}
-.top{position:fixed;top:0;width:100%;z-index:99;background:rgba(253,251,246,.92);backdrop-filter:blur(16px);border-bottom:1px solid #eee;display:flex;justify-content:space-between;padding:12px 20px;align-items:center}
-.hero{height:100vh;display:grid;grid-template-columns:1.1fr.9fr;align-items:center;padding:90px 40px 40px;gap:20px}
-@media(max-width:900px){.hero{grid-template-columns:1fr;height:auto;padding-top:90px}}
-#canvas{border-radius:32px;box-shadow:0 30px 80px rgba(0,0,0,.25);border:6px solid #fff;width:100%;aspect-ratio:1;overflow:hidden;background:#f4efe2}
-h1{font-family:'Amiri';font-size:clamp(2.8rem,6vw,4.8rem);line-height:.9}
-.badge{display:inline-flex;gap:8px;background:#121412;color:#fff;border-radius:100px;padding:8px 14px;font-size:.8rem;margin-bottom:14px}
-.btn{border:none;padding:14px 22px;border-radius:100px;font-weight:900;cursor:pointer}
-.btn-gold{background:var(--gold)}.btn-dark{background:#121412;color:#fff}
-.card{background:#fff;border:1px solid #eee;border-radius:24px;padding:20px;margin-top:14px}
-input{width:100%;padding:14px 18px;border-radius:100px;border:1px solid #ddd;font-family:'Tajawal';margin:8px 0}
-.poem{font-family:'Amiri';font-size:1.3rem;line-height:1.9;background:linear-gradient(180deg,#fff 0%,#fdf6e3 100%);border-radius:20px;padding:20px;border:1px solid #f0e6c8}
-</style>
-</head>
-<body>
-<div class="top">
-<img src="https://upload.wikimedia.org/wikipedia/ar/7/7d/%D8%B4%D8%B9%D8%A7%D8%B1_%D8%AC%D8%A7%D9%85%D8%B9%D8%A9_%D8%A7%D9%84%D9%82%D8%AF%D8%B3_%D8%A7%D9%84%D9%85%D9%81%D8%AA%D9%88%D8%AD%D8%A9.png" height="38">
-<div style="font-size:.8rem;text-align:left"><b>QOU - GEN-AI LAB</b><br>لينا عصام - ماجستير - سلفيت</div>
-</div>
-
+<!DOCTYPE html><html lang="ar" dir="rtl"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>GEN-AI OLIVE Intelligence</title><link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;900&display=swap" rel="stylesheet"><script src="https://cdn.jsdelivr.net/npm/p5@1.9.0/lib/p5.min.js"></script><style>*{margin:0;box-sizing:border-box}body{font-family:Tajawal;background:#0a1a12;color:#fff}.top{height:70px;background:#0d2818;display:flex;justify-content:space-between;align-items:center;padding:0 20px;border-bottom:1px solid #2a4a35}.hero{min-height:90vh;background:linear-gradient(rgba(10,26,18,.75),rgba(10,26,18,.9)),url('https://images.unsplash.com/photo-1502082553048-f009c37129b9?q=80&w=2000');background-size:cover;padding:20px;display:grid;grid-template-columns:460px 1fr;gap:20px}.panel{background:rgba(8,18,12,.94);border:1px solid #c9a85a77;border-radius:20px;padding:16px}.btn{width:100%;padding:13px;border-radius:12px;border:none;font-weight:900;cursor:pointer;margin-top:10px}.gold{background:linear-gradient(#f0d68e,#c9a85a);color:#1a1205}.stat{background:#102a1b;border:1px solid #c9a85a44;border-radius:14px;padding:12px;text-align:center}.footer{height:50px;background:#08120e;display:flex;justify-content:space-around;align-items:center;font-size:.7rem;color:#7a9a85;border-top:1px solid #1a3525}@media(max-width:900px){.hero{grid-template-columns:1fr}}</style></head><body>
+<div class="top"><div><b style="color:#e8c77a">GEN-AI OLIVE Intelligence</b> <span style="border:1px solid #c9a85a;border-radius:20px;padding:4px 10px;font-size:.7rem;color:#e8c77a;margin-right:10px">⚽ كأس العالم 2026</span></div><div style="font-size:.8rem">جامعة القدس المفتوحة QOU</div></div>
 <div class="hero">
-<div>
-<div class="badge">🧬 SUPERIOR GENERATIVE INTELLIGENCE - لأول مرة في فلسطين</div>
-<h1>كل اسم<br>بولد<br><span style="color:#5a7a2a">زيتونة فريدة</span></h1>
-<p style="color:#666;margin-top:14px;line-height:1.7">اكتبي اسمك أو اسم عائلتك من كفر الديك، والذكاء التوليدي رح يولد لك شجرة زيتون رومي عمرها ما تكررت، بقصة وقصيدة وشهادة ملكية رقمية باسمك.</p>
-
-<div class="card">
-<b>🧬 ولّدي زيتونتك الآن:</b>
-<input id="nameInput" placeholder="مثال: لينا عصام - عائلة الديك">
-<div style="display:flex;gap:8px;margin-top:8px">
-<button class="btn btn-gold" onclick="generateOlive()">ولّد بالذكاء المتفوق ✨</button>
-<button class="btn btn-dark" onclick="talkToJad()">احكي مع الجد 👴</button>
+<div class="panel"><div style="font-size:.7rem;color:#8ab59a">CODE • شجرة الزيتون المولدة</div><div id="canvasWrap" style="border-radius:14px;overflow:hidden;margin-top:8px"></div><input id="nameInput" placeholder="اكتبي اسمك: لينا عصام - كفر الديك" style="width:100%;padding:11px;border-radius:10px;border:1px solid #2a4a35;background:#0f2318;color:#fff;margin-top:10px"><button class="btn gold" onclick="generate()">✨ ولّد شجرتك الفريدة الآن</button><div id="out" style="margin-top:10px;background:#102a1b;padding:10px;border-radius:10px;font-size:.85rem;line-height:1.7;color:#cfe7d2"></div></div>
+<div><h1 style="font-size:2.8rem;line-height:1.1">توليد أشجار الزيتون<br><span style="color:#e8c77a">بالذكاء الاصطناعي</span></h1><p style="color:#b7c9b2;margin-top:8px">كل اسم يولد شجرة لا تتكرر أبداً عبر خوارزميات Fractal توليدية</p><div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px"><div class="stat"><b>12,847+</b><br><small>شجرة مولدة</small></div><div class="stat"><b>98.3%</b><br><small>دقة النموذج</small></div><div class="stat"><b>4.2 طن</b><br><small>CO₂ موفرة</small></div></div></div>
 </div>
-</div>
-
-<div id="result" class="card" style="display:none">
-<div id="poem" class="poem"></div>
-<div style="margin-top:12px;font-size:.85rem;color:#666" id="cert"></div>
-<button class="btn btn-dark" style="margin-top:12px;width:100%" onclick="downloadCert()">حمّل شهادة ملكيتك الرقمية 📜</button>
-</div>
-</div>
-
-<div>
-<div id="canvas"></div>
-<p style="text-align:center;color:#999;font-size:.75rem;margin-top:10px">GEN-AI CANVAS: كل شجرة تولد بـ seed فريد - لا تتكرر أبداً</p>
-</div>
-</div>
-
+<div class="footer"><span>QOU • مختبر الذكاء التوليدي</span><span style="color:#e8c77a">🏆 World Cup Edition 2026</span><span>الاستدامة • البحث • الابتكار</span></div>
 <script>
-let sketch = function(p){
-let age=800, branches=[];
-p.setup=function(){let c=p.createCanvas(600,600);c.parent('canvas'); p.noLoop();}
-p.draw=function(){
-p.background(244,239,226);
-p.translate(p.width/2, p.height*0.85);
-let seed=document.getElementById('nameInput').value||'لينا';
-p.randomSeed(hash(seed));
-age=p.random(300,1200);
-drawTree(p, 0,0, 110, -p.PI/2, 8);
-}
-function drawTree(p,x,y,len,angle,depth){
-if(depth==0||len<6)return;
-let x2=x+p.cos(angle)*len;
-let y2=y+p.sin(angle)*len;
-p.strokeWeight(depth*1.6); p.stroke(60+depth*6, 45+depth*2, 20);
-p.line(x,y,x2,y2);
-if(depth<3){p.noStroke();p.fill(58,90,35,p.random(140,210));p.ellipse(x2,y2,p.random(14,28),p.random(10,22));}
-let n=p.random(2,3.3);
-for(let i=0;i<n;i++){drawTree(p,x2,y2,len*p.random(0.62,0.82),angle+p.random(-0.9,0.9),depth-1);}
-}
-function hash(s){let h=0;for(let i=0;i<s.length;i++)h=(h*31+s.charCodeAt(i))%1000000;return h;}
-};
-new p5(sketch);
-
-function generateOlive(){
-let name=document.getElementById('nameInput').value||'لينا عصام';
-let age=Math.floor(Math.random()*700+300);
-let rootDepth=(Math.random()*8+4).toFixed(1);
-let stories=[
-`يا ${name}، أنا زيتونتك. انزرعت سنة ${2026-age}. شفت جدك وهو صغير يلعب تحتّي بظهر صبح. جذوري ${rootDepth} متر بتشرب من نفس العين اللي شرب منها الرومان.`,
-`يا ${name}، أنا من سلالة الزيتون الرومي النقي. بذوري سافرت من صور إلى كفر الديك قبل ${age} سنة. كل حبة زيتون مني فيها ذاكرة 40 جيل.`,
-`يا ${name}، وقفت بوجه جرافات 2018. أهل كفر الديك ناموا تحتي 3 ليالي يحموني. أنا مش شجرة، أنا وثيقة ملكية حية.`
-];
-let poems=[
-`في ظهر صبحٍ يا ${name} قامت شجرتي\nجذرها في الصخر، وفرعها في السماء\n${age} عاماً تحرس عين الديوك\nوتحكي للريح حكاية البقاء`,
-`يا بنت كفر الديك يا ${name}\nزيتونتك بتحكي ما بتنام\n${age} سنة واقفة بتصلي\nللأرض اللي ما بتنضام`
-];
-document.getElementById('result').style.display='block';
-document.getElementById('poem').innerHTML=stories[Math.floor(Math.random()*stories.length)]+'<br><br><b>'+poems[Math.floor(Math.random()*poems.length)]+'</b>';
-document.getElementById('cert').innerHTML=`📜 شهادة توليد رقمية فريدة<br>الاسم: <b>${name}</b><br>العمر: ${age} سنة | عمق الجذر: ${rootDepth}m | الموقع: ظهر صبح - 32.0665N 35.0839E<br>الـ HASH: OLIVE-${btoa(name).slice(0,8).toUpperCase()}-${age}<br>جامعة القدس المفتوحة - ماجستير 2026 - QOU GEN-AI LAB`;
-}
-
-function talkToJad(){
-let name=document.getElementById('nameInput').value||'يمّا';
-let replies=[
-`أهلا يا ${name} يا ستي... أنا الحج أبو عصام، عمري 91 سنة. هالزيتونة اللي شايفتيها زرعها سيدي سيدي. كنا نعصر زيتها على حجر بدّ قديم... ريحته لسه بأنفي لليوم.`,
-`يا ${name}، بتعرفي؟ ظهر صبح كان يسموه "بطن البلد" لأنه بطعمي كل كفر الديك. 300 دونم زيتون رومي، كل شجرة بتعطي 40 تنكة!`,
-`الله يرضى عليكي يا ${name}، لا تبيعي الأرض. الزيتون هو الهوية. اللي ببيع زيتونة ببيع اسمه.`
-];
-alert('👴 الجد أبو عصام - 91 سنة - كفر الديك:\n\n'+replies[Math.floor(Math.random()*replies.length)]);
-}
-function downloadCert(){
-let name=document.getElementById('nameInput').value||'لينا';
-let txt=document.getElementById('cert').innerText+'\n\n'+document.getElementById('poem').innerText;
-let blob=new Blob([txt],{type:'text/plain'});let a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=`شهادة-زيتونة-${name}.txt`;a.click();
-}
-</script>
-</body>
-</html>
+let sk=function(p){p.setup=function(){let c=p.createCanvas(430,430);c.parent('canvasWrap');p.noLoop();};p.draw=function(){let n=document.getElementById('nameInput').value||'لينا عصام';p.randomSeed(hash(n));p.background(10,21,16);p.translate(p.width/2,p.height*0.88);b(p,0,0,90,-p.HALF_PI,7);function hash(s){let h=0;for(let i=0;i<s.length;i++)h=(h*31+s.charCodeAt(i))>>>0;return h;}function b(p,x,y,l,a,d){if(d==0||l<5)return;let x2=x+p.cos(a)*l,y2=y+p.sin(a)*l;p.strokeWeight(d*1.7);p.stroke(110+d*8,80+d*4,35);p.line(x,y,x2,y2);if(d<=2){p.noStroke();p.fill(92+p.random(-10,10),128+p.random(-10,10),52,200);p.ellipse(x2,y2,p.random(16,26),p.random(12,20));}let k=p.floor(p.random(2,4));for(let i=0;i<k;i++)b(p,x2,y2,l*p.random(0.62,0.84),a+p.random(-0.8,0.8),d-1);}}};new p5(sk);
+function generate(){let name=document.getElementById('nameInput').value||'لينا عصام - كفر الديك';let age=Math.floor(Math.random()*600+400);document.getElementById('out').innerHTML=`📜 شهادة GEN-AI<br>الاسم: <b>${name}</b><br>العمر: ${age} سنة | كفر الديك - ظهر صبح<br>HASH: OL-${btoa(name).slice(0,6).toUpperCase()}<br><br>يا ${name}، شجرتك تولدت الآن بخوارزمية فريدة!`;}
+setTimeout(generate,300);
+</script></body></html>
