@@ -3,105 +3,81 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>UNESCO OER - Leena Essam - سلفيت 2026</title>
-<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@700;900&display=swap" rel="stylesheet">
+<title>OER سلفيت - لينا عصام أحمد عبد الرحمن - H5P + GitHub</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;900&display=swap" rel="stylesheet">
 <style>
-*{box-sizing:border-box}body{margin:0;font-family:'Tajawal',Tahoma;background:#f8f5ee;color:#0f2a44;line-height:1.6}
-.header{background:linear-gradient(135deg,#0f2a44 0%,#1e4a7a 100%);color:#fff;padding:36px 14px;text-align:center;border-bottom:5px solid #d4af37}
-.badge{background:linear-gradient(135deg,#d4af37,#f0d060);color:#0f2a44;padding:7px 14px;border-radius:20px;font-weight:900;margin:4px;display:inline-block;font-size:12px}
-.container{max-width:1100px;margin:18px auto;padding:0 12px}
-.card{background:#fff;border-radius:18px;padding:20px;margin:18px 0;box-shadow:0 8px 24px rgba(15,42,68,.08);border:1px solid #e8dcc0}
-.grid{display:grid;gap:12px}.g4{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}.g5{grid-template-columns:repeat(auto-fit,minmax(160px,1fr))}.g3{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
-.box{border:2px solid #d4af37;border-radius:14px;padding:14px;text-align:center;background:#fff}
-.box-blue{background:linear-gradient(135deg,#0f2a44,#1e4a7a);color:#fff;border-color:#0f2a44}
-.progress{width:140px;height:140px;border-radius:50%;background:conic-gradient(#d4af37 0% 72%,#ddd 72% 100%);display:flex;align-items:center;justify-content:center;margin:auto;position:relative}
-.progress::before{content:'';width:100px;height:100px;background:#fff;border-radius:50%;position:absolute}
-.progress b{position:relative;z-index:2;font-size:32px}
-.layer{border-right:6px solid #d4af37;padding:10px 14px;margin:14px 0;background:#fdfcf8;border-radius:10px}
-.btn{background:linear-gradient(135deg,#d4af37,#f7e27a);color:#0f2a44;border:0;padding:11px 18px;border-radius:12px;font-weight:900;cursor:pointer;margin:4px}
-.btn-red{background:#ff0000;color:#fff}
-.footer{background:#0f2a44;color:#d4af37;text-align:center;padding:22px;font-size:11px}
-/* كود الفيديو - حل ذكي */
-.video-box{position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:16px;background:#000;border:3px solid #d4af37;margin:12px 0}
-.video-box iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Tajawal',sans-serif}
+body{background:#fdfcf8;color:#0f2a44;line-height:1.8}
+.header{background:linear-gradient(135deg,#0f2a44,#1e4a7a);color:#d4af37;padding:32px 18px;text-align:center;border-bottom:6px solid #d4af37}
+.header h1{font-size:30px;font-weight:900;line-height:1.2}
+.header p{color:#fff;font-size:13px;margin-top:8px}
+.container{max-width:860px;margin:0 auto;padding:18px}
+.card{background:#fff;border-radius:20px;padding:20px;margin:18px 0;box-shadow:0 10px 30px rgba(15,42,68,.1);border:1px solid rgba(212,175,55,.3)}
+.badge{display:inline-block;background:#0f2a44;color:#d4af37;padding:5px 14px;border-radius:20px;font-size:11px;font-weight:800}
+.btn{padding:12px 20px;border-radius:12px;border:none;cursor:pointer;font-weight:800;font-size:14px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:700px){.grid2{grid-template-columns:1fr}}
+.r-card{border:2px solid #d4af37;border-radius:12px;padding:14px;background:#fffdf0}
+.optBtn:hover{transform:scale(1.02);transition:.2s}
 </style>
 </head>
 <body>
 <div class="header">
-<div style="color:#d4af37;font-size:11px;letter-spacing:2px">UNESCO • OER 2.1 • 2025 | كفر الديك • سلفيت • فلسطين</div>
-<h1>اليونسكو والموارد التعليمية المفتوحة<br><span style="color:#d4af37;font-size:22px">UNESCO OER - Leena Essam</span></h1>
-<p>لينا عصام أحمد عبد الرحمن - بإشراف د. محمود حوامدة - محافظة سلفيت - وزارة التربية</p>
-<div><span class="badge">Canva</span><span class="badge">H5P</span><span class="badge">GitHub Pages</span><span class="badge">CC BY 4.0</span><span class="badge">No Images - Code Only</span></div>
+<div style="letter-spacing:4px;font-size:10px">OER • UNESCO 2019 • KAFR AL-DIK • SALFIT • CC BY 4.0</div>
+<h1>🌿 OER سلفيت - لينا عصام أحمد عبد الرحمن</h1>
+<p>مكتبة رقمية مفتوحة - كفر الديك - محافظة سلفيت | مشروع تخرج تكنولوجيا التعليم</p>
+<p style="margin-top:10px"><span class="badge" style="background:#d4af37;color:#0f2a44">Canva = تصميم | H5P = تفاعل | GitHub = حفظ ونشر مجاني</span></p>
 </div>
 
 <div class="container">
 
+<!-- 1- فيديو يونسكو -->
+<div class="card" style="border:3px solid #0f2a44">
+<h2 style="color:#0f2a44">🎥 1- ما هي OER؟ - فيديو يونسكو الرسمي (دقيقتين)</h2>
+<div style="position:relative;padding-bottom:56.25%;height:0;margin-top:14px;background:#000;border-radius:14px;overflow:hidden">
+<iframe style="position:absolute;top:0;left:0;width:100%;height:100%" src="https://www.youtube.com/embed/P0TDd1e2R1o" title="UNESCO OER Recommendation" frameborder="0" allowfullscreen></iframe>
+</div>
+<div style="margin-top:12px;background:#0f2a44;color:#fff;padding:12px;border-radius:10px;font-size:12px;text-align:center">توصية يونسكو 2019: مواد تعليمية مفتوحة بترخيص مفتوح تسمح بالاحتفاظ وإعادة الاستخدام والتنقيح والمزج وإعادة التوزيع - CC BY 4.0</div>
+</div>
+
+<!-- 2- شرح العلاقة -->
+<div class="card" style="background:linear-gradient(135deg,#fff,#fdf6e3)">
+<h2 style="color:#0f2a44">🔗 2- شو علاقة H5P و GitHub؟</h2>
+<p style="font-size:13px;margin:8px 0">سألتي ليش بنستخدم الاثنين مع بعض؟ هاي الإجابة:</p>
+<div class="grid2" style="margin-top:12px">
+<div class="r-card"><b style="color:#0f2a44">👩‍🍳 H5P = الطباخ</b><br><span style="font-size:12px">بيعمل الكويز، لعبة تحدي الوزير، الفيديو التفاعلي. بيعطي علامة و feedback فوراً. بس بدون صفحة، بيضل على كمبيوترك.</span><br><span class="badge" style="margin-top:6px">تفاعل</span></div>
+<div class="r-card" style="background:#0f2a44;color:#fff;border-color:#0f2a44"><b style="color:#d4af37">🏛️ GitHub = المطعم والثلاجة</b><br><span style="font-size:12px">بيحفظ الكود، بيعطيكي رابط مجاني، وبيحفظ كل نسخة (عندك 13 نسخة). أي معلم بيقدر يشوف الكود وياخذ نسخة.</span><br><span class="badge" style="margin-top:6px;background:#d4af37;color:#0f2a44">حفظ ونشر</span></div>
+</div>
+<div style="margin-top:14px;background:#d4af37;color:#0f2a44;padding:12px;border-radius:10px;text-align:center;font-weight:800">مع بعض: H5P يعمل التفاعل + GitHub ينشره للعالم = OER حقيقي يحقق الـ 5R حسب يونسكو</div>
+</div>
+
+<!-- 3- 5R -->
 <div class="card">
-<h2>01 - مخطط تكامل Canva • H5P • GitHub</h2>
-<div class="grid g4">
-<div class="box"><div style="font-size:32px">🎨</div><b>01 إنشاء المحتوى</b><br><span style="font-size:11px">Design in Canva - Export SCORM</span></div>
-<div class="box"><div style="font-size:32px">⚡</div><b>02 تكامل H5P</b><br><span style="font-size:11px">Quiz, Interactive Video</span></div>
-<div class="box"><div style="font-size:32px">🔧</div><b>03 GitHub</b><br><span style="font-size:11px">Version Control</span></div>
-<div class="box"><div style="font-size:32px">🚀</div><b>04 النشر</b><br><span style="font-size:11px">Deploy + Analytics</span></div>
+<h2 style="color:#0f2a44">♻️ 3- إطار 5R حسب يونسكو - تطبيق في سلفيت</h2>
+<div class="grid2" style="margin-top:12px">
+<div class="r-card"><b>1. Retain - احتفاظ</b><br><span style="font-size:11px">مدرسة كفر الديك تحتفظ بنسخة من الكويز على كمبيوتر بدون إنترنت - USB</span></div>
+<div class="r-card"><b>2. Reuse - إعادة استخدام</b><br><span style="font-size:11px">معلم في سلفيت يستخدم نفس الكويز لطلابه بدون ما يكتب من الصفر</span></div>
+<div class="r-card"><b>3. Revise - تنقيح</b><br><span style="font-size:11px">تعدلي سؤال ليتناسب مع صف رابع بدل سابع</span></div>
+<div class="r-card"><b>4. Remix - مزج</b><br><span style="font-size:11px">تدمجي كويز لينا + فيديو Canva + خريطة سلفيت = مورد جديد</span></div>
+<div class="r-card" style="grid-column:1/-1;background:#0f2a44;color:#fff;border-color:#0f2a44"><b style="color:#d4af37">5. Redistribute - إعادة توزيع</b><br><span style="font-size:11px">تنشريه على GitHub Pages برابط مجاني - كل فلسطين بتستفيد - CC BY 4.0 - مع ذكر اسمك</span></div>
 </div>
 </div>
 
-<div class="card">
-<h2>02 - لوحة تعلم OER - 72%</h2>
-<div style="display:grid;grid-template-columns:180px 1fr;gap:12px">
-<div style="text-align:center"><div class="progress"><b>72%</b></div><p style="font-size:11px">مكتمل</p></div>
-<div class="grid g5">
-<div class="box box-blue"><div style="font-size:28px">🔒</div><b style="color:#d4af37">Retain</b><br>الاحتفاظ</div>
-<div class="box box-blue"><div style="font-size:28px">🔄</div><b style="color:#d4af37">Reuse</b><br>إعادة الاستخدام</div>
-<div class="box box-blue"><div style="font-size:28px">✏️</div><b style="color:#d4af37">Revise</b><br>المراجعة</div>
-<div class="box box-blue"><div style="font-size:28px">🧩</div><b style="color:#d4af37">Remix</b><br>الدمج</div>
-<div class="box box-blue"><div style="font-size:28px">📤</div><b style="color:#d4af37">Redistribute</b><br>إعادة التوزيع</div>
+<!-- 4- الكويز الخاص H5P CUSTOM -->
+<div class="card" id="quiz-leena" style="border:4px solid #d4af37;background:linear-gradient(135deg,#0f2a44,#1e4a7a);color:#fff">
+<div style="text-align:center">
+<div style="font-size:10px;color:#d4af37;letter-spacing:3px">H5P CUSTOM CODE • MADE BY LEENA ESSAM • كفر الديك - سلفيت • CC BY 4.0 • OFFLINE READY</div>
+<h2 style="color:#d4af37;margin:10px 0">🏆 4- كويز سلفيت التفاعلي - لينا عصام أحمد عبد الرحمن</h2>
+<p style="font-size:12px">H5P مخصص كتبتيه بالكود - يعمل بدون إنترنت - يحقق Retain</p>
+<div style="background:rgba(212,175,55,.25);border-radius:20px;padding:8px 16px;display:inline-block;margin-top:10px;font-weight:800"><span id="score">النقاط: 0 / 5</span> | <span id="qnum">سؤال 1 من 5</span></div>
 </div>
-</div>
-</div>
-
-<div class="card">
-<h2>03 - البنية المعمارية OER</h2>
-<div class="layer"><b>الطبقة 1 - 5 مجالات اليونسكو</b><div class="grid g5" style="margin-top:8px"><div class="box">🎓 التعليم</div><div class="box">🔬 العلوم</div><div class="box">👥 الإنسانية</div><div class="box">🏛️ الثقافة</div><div class="box">💬 الاتصال</div></div></div>
-<div class="layer"><b>الطبقة 2 - إطار 5R</b><div class="grid g5" style="margin-top:8px"><div class="box">⬇️ Retain</div><div class="box">🔗 Reuse</div><div class="box">✏️ Revise</div><div class="box">🧩 Remix</div><div class="box">🌐 Redistribute</div></div></div>
-<div class="layer"><b>الطبقة 3 - التقنية</b><div class="grid g3" style="margin-top:8px"><div class="box" style="background:#fdf6e3"><b>Canva</b></div><div class="box" style="background:#fdf6e3"><b>H5P</b></div><div class="box" style="background:#fdf6e3"><b>GitHub</b></div></div></div>
-</div>
-
-<!-- كود الفيديو الكامل مع حلين -->
-<div class="card" style="border:3px solid #d4af37">
-<h2>🎬 فيديو يونسكو الرسمي - ما هي الموارد المفتوحة؟</h2>
-
-<!-- الحل 1: مشغل يوتيوب -->
-<div class="video-box">
-<iframe src="https://www.youtube-nocookie.com/embed/T5ghybjqY3E?rel=0&modestbranding=1" 
-title="UNESCO OER Video" 
-allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-allowfullscreen loading="lazy"></iframe>
-</div>
-
-<!-- الحل 2: إذا الفيديو ما اشتغل - نص يونسكو + أزرار -->
-<div style="background:#0f2a44;color:#fff;border-radius:14px;padding:16px;margin-top:12px;text-align:center">
-<p style="color:#d4af37;font-weight:900">إذا الفيديو ما اشتغل اضغطي هنا - يفتح يوتيوب مباشرة:</p>
-<a href="https://www.youtube.com/watch?v=T5ghybjqY3E" target="_blank" class="btn btn-red" style="text-decoration:none;display:inline-block;padding:14px 28px;font-size:16px;border-radius:30px">▶️ شغلي الفيديو على يوتيوب الآن</a>
-<br><br>
-<div style="background:#fff;color:#0f2a44;border-radius:12px;padding:14px;text-align:justify;font-size:13px">
-<strong>التعريف الرسمي من الفيديو - UNESCO 2019:</strong><br>
-"الموارد التعليمية المفتوحة هي مواد التعلم والتعليم والبحث بأي شكل ووسيط موجودة في المجال العام أو تحت حقوق الطبع لكن تم إصدارها بترخيص مفتوح يسمح بالوصول المجاني وإعادة الاستخدام والتكيف وإعادة التوزيع"
-<br><span style="font-size:11px;color:#666">هذا النص هو نفس محتوى الفيديو - يعمل بدون إنترنت لمدارس كفر الديك</span>
-</div>
+<div id="quiz-box" style="background:#fff;color:#0f2a44;border-radius:16px;padding:20px;margin:18px 0;min-height:240px"></div>
+<div style="text-align:center">
+<button class="btn" id="nextBtn" onclick="nextQ()" style="display:none;background:#d4af37;color:#0f2a44">التالي ➡️</button>
+<div id="finalResult" style="display:none;background:#fff;color:#0f2a44;border-radius:16px;padding:20px;margin-top:12px"></div>
 </div>
 </div>
 
-<div class="card" style="background:#0f2a44;color:#fff">
-<h2 style="color:#d4af37">🎮 تحدي الوزير</h2>
-<p>أنتي وزيرة التربية في سلفيت - مدرسة بدون إنترنت</p>
-<button class="btn" onclick="document.getElementById('rr').innerHTML='✅ ممتاز! مكتبة رقمية Offline - A+'">مكتبة رقمية</button>
-<button class="btn" onclick="document.getElementById('rr').innerHTML='👍 جيد لكن مكلف'">طباعة</button>
-<button class="btn" onclick="document.getElementById('rr').innerHTML='💡 USB محدود'">USB</button>
-<p id="rr" style="color:#d4af37;font-weight:900;margin-top:10px"></p>
-</div>
-
-</div>
-<div class="footer">لينا عصام أحمد عبد الرحمن - كفر الديك • سلفيت • فلسطين | د. محمود حوامدة | CC BY 4.0 | https://leenaessam2024-creator.github.io/oer-salfit-leena-2026/</div>
-</body>
-</html>
+<!-- 5- معلومات -->
+<div class="card" style="text-align:center;background:linear-gradient(135deg,#0f2a44,#1e4a7a);color:#fff;border:3px solid #d4af37">
+<p style="color:#d4af37;font-weight:900;font-size:18px">لينا عص
