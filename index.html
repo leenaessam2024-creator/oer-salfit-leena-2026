@@ -3,234 +3,276 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>OER سلفيت التفاعلي - رسالة صوتية - لينا عصام</title>
+<title>نص + صوت - اليونسكو والموارد المفتوحة - لينا عصام</title>
 <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;900&display=swap" rel="stylesheet">
 <style>
+:root{--navy:#0f2a44;--gold:#d4af37}
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Tajawal',sans-serif}
-body{background:#fdfcf8;color:#0f2a44;line-height:2}
-.header{background:linear-gradient(135deg,#0f2a44 0%,#1e4a7a 100%);color:#d4af37;padding:16px 18px 20px;border-bottom:6px solid #d4af37;text-align:center}
-.uni-bar{display:flex;justify-content:space-between;align-items:center;max-width:920px;margin:0 auto 12px;background:rgba(255,255,255,.08);border:1px solid rgba(212,175,55,.3);border-radius:14px;padding:8px 14px}
-.uni-circle{width:42px;height:42px;background:#d4af37;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;color:#0f2a44;border:2px solid #fff}
-.badge-tech{background:linear-gradient(135deg,#d4af37,#ffd700);color:#0f2a44;padding:6px 12px;border-radius:20px;font-size:11px;font-weight:900}
-.container{max-width:920px;margin:0 auto;padding:14px}
-.card{background:#fff;border-radius:18px;padding:20px;margin:14px 0;box-shadow:0 10px 30px rgba(15,42,68,.1);border:1px solid rgba(212,175,55,.3)}
-.welcome-box{background:linear-gradient(135deg,#0f2a44,#1e4a7a);color:#fff;border-radius:20px;padding:20px;border:4px solid #d4af37;text-align:center;position:relative}
-.play-btn{width:80px;height:80px;background:linear-gradient(135deg,#d4af37,#ffd700);border-radius:50%;border:4px solid #fff;display:flex;align-items:center;justify-content:center;font-size:36px;cursor:pointer;margin:12px auto;box-shadow:0 8px 20px rgba(0,0,0,.3);transition:.2s}
-.play-btn:hover{transform:scale(1.1)}
+body{background:#fdfcf8;color:var(--navy);line-height:2.2}
+.header{background:linear-gradient(135deg,var(--navy),#1e4a7a);color:var(--gold);padding:16px;text-align:center;border-bottom:6px solid var(--gold);position:sticky;top:0;z-index:100}
+.progress{position:fixed;top:0;left:0;height:5px;background:linear-gradient(90deg,var(--gold),#ffd700);width:0%;z-index:200}
+.container{max-width:980px;margin:0 auto;padding:14px}
+.card{background:#fff;border-radius:18px;padding:22px;margin:16px 0;box-shadow:0 10px 30px rgba(15,42,68,.1);border:1px solid rgba(212,175,55,.3);position:relative}
+.voice-box{background:linear-gradient(135deg,var(--navy),#1e4a7a);color:#fff;border-radius:20px;padding:20px;border:4px solid var(--gold);text-align:center}
+.play-btn{width:72px;height:72px;background:linear-gradient(135deg,var(--gold),#ffd700);border-radius:50%;border:3px solid #fff;display:flex;align-items:center;justify-content:center;font-size:30px;cursor:pointer;margin:12px auto;box-shadow:0 6px 18px rgba(0,0,0,.3)}
+.play-btn.small{width:46px;height:46px;font-size:18px;margin:0 8px 0 0;display:inline-flex;vertical-align:middle}
 .play-btn.playing{animation:pulse 1s infinite}
-@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(212,175,55,.7)}70%{box-shadow:0 0 0 16px rgba(212,175,55,0)}100%{box-shadow:0 0 0 0 rgba(212,175,55,0)}}
-.canva-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-@media(max-width:700px){.canva-grid{grid-template-columns:1fr}.uni-bar{flex-direction:column;gap:8px}}
-.canva-card{border:2px solid #d4af37;border-radius:14px;padding:14px;background:linear-gradient(135deg,#fff,#fffdf0);text-decoration:none;color:#0f2a44;display:block;transition:.25s;position:relative;overflow:hidden}
-.canva-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:4px;background:linear-gradient(90deg,#d4af37,#0f2a44)}
-.canva-card:hover{transform:translateY(-4px);box-shadow:0 12px 24px rgba(15,42,68,.18);border-color:#0f2a44}
-.badge{display:inline-block;background:#0f2a44;color:#d4af37;padding:4px 12px;border-radius:20px;font-size:10px;font-weight:800;margin:2px}
-h2{color:#0f2a44;border-right:6px solid #d4af37;padding-right:12px;margin:14px 0 8px;font-size:17px}
-.r-card{border:2px solid #d4af37;border-radius:12px;padding:10px;background:#fffdf0;font-size:12px}
-.note{background:#0f2a44;color:#fff;padding:10px;border-radius:10px;font-size:11px;margin:8px 0;border-right:4px solid #d4af37}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(212,175,55,.7)}70%{box-shadow:0 0 0 14px rgba(212,175,55,0)}100%{box-shadow:0 0 0 0 rgba(212,175,55,0)}}
+.badge{display:inline-block;background:var(--navy);color:var(--gold);padding:4px 12px;border-radius:20px;font-size:10px;font-weight:800;margin:2px}
+h2{color:var(--navy);border-right:6px solid var(--gold);padding-right:12px;margin:18px 0 10px;font-size:17px;background:linear-gradient(90deg,rgba(212,175,55,.15),transparent);padding-top:6px;padding-bottom:6px;border-radius:6px}
+h3{color:#1e4a7a;margin:12px 0 6px}
+table{width:100%;border-collapse:collapse;margin:12px 0;font-size:11px}
+th{background:var(--navy);color:var(--gold);padding:8px}
+td{border:1px solid var(--gold);padding:8px;background:#fffdf0}
+.note{background:var(--navy);color:#fff;padding:10px;border-radius:10px;font-size:11px;margin:10px 0;border-right:4px solid var(--gold)}
+.gold-box{background:linear-gradient(135deg,#fff,#fdf6e3);border:2px dashed var(--gold);padding:12px;border-radius:12px;margin:10px 0}
+.text-content{font-size:13px;background:#fffdf0;padding:12px;border-radius:10px;border:1px solid rgba(212,175,55,.3);margin:8px 0}
+.controls{display:flex;align-items:center;gap:6px;margin:8px 0;flex-wrap:wrap}
+.canva-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.canva-card{border:2px solid var(--gold);border-radius:12px;padding:0;overflow:hidden;background:#fff;text-decoration:none;color:var(--navy);display:block}
 </style>
 </head>
 <body>
-
+<div class="progress" id="progress"></div>
 <div class="header">
-<div class="uni-bar">
-<div style="display:flex;align-items:center;gap:10px">
-<div class="uni-circle">QOU</div>
-<div style="text-align:right">
-<div style="color:#fff;font-weight:900;font-size:12px">جامعة القدس المفتوحة - سلفيت</div>
-<div style="color:#d4af37;font-size:9px">تكنولوجيا التعليم - مشروع تخرج OER</div>
+<div style="display:flex;justify-content:center;align-items:center;gap:10px;flex-wrap:wrap">
+<div style="width:42px;height:42px;background:#d4af37;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;color:#0f2a44;border:2px solid #fff">QOU</div>
+<div><div style="color:#fff;font-weight:900;font-size:13px">جامعة القدس المفتوحة - تكنولوجيا التعليم - دراسات عليا</div><div style="color:#d4af37;font-size:10px">نص + صوت - المادة الكاملة بدون نقص - 17 فصل - لينا عصام - كفر الديك</div></div>
+<div style="background:#d4af37;color:#0f2a44;padding:6px 12px;border-radius:20px;font-size:10px;font-weight:900">💻 مختصة EdTech</div>
 </div>
-</div>
-<div class="badge-tech">💻 مختصة EdTech - لينا عصام</div>
-</div>
-<div style="font-size:9px;letter-spacing:2px">INTERACTIVE • VOICE WELCOME • CANVA SOURCES • H5P • CC BY 4.0</div>
-<h1 style="font-size:24px;font-weight:900">🌿 OER سلفيت التفاعلي</h1>
 </div>
 
 <div class="container">
 
-<!-- 1- رسالة ترحيبية بصوت في المقدمة -->
-<div class="welcome-box">
-<div style="font-size:10px;color:#d4af37;letter-spacing:2px">🎙️ رسالة ترحيبية بصوت لينا عصام - في المقدمة</div>
-<h2 style="color:#d4af37;border:none;text-align:center;margin:8px 0">أهلاً وسهلاً بكم في موقع OER سلفيت!</h2>
-
-<div class="play-btn" id="playBtn" onclick="toggleVoice()">▶️</div>
-<div style="font-size:11px;color:#d4af37" id="status">اضغطي للاستماع للترحيب الصوتي</div>
-
-<div id="welcomeText" style="background:rgba(255,255,255,.08);border:1px solid rgba(212,175,55,.3);padding:14px;border-radius:12px;margin-top:12px;font-size:12px;line-height:1.8;text-align:right">
-<b style="color:#d4af37">السلام عليكم ورحمة الله،</b><br>
-أنا <b style="color:#d4af37">لينا عصام أحمد عبد الرحمن</b> من كفر الديك - محافظة سلفيت، طالبة تكنولوجيا التعليم في جامعة القدس المفتوحة.<br><br>
-أرحب بكم في مشروعي التفاعلي <b>مكتبة سلفيت الرقمية المفتوحة</b>، هذا المشروع يطبق توصية اليونسكو 2019 للموارد التعليمية المفتوحة، وإطار 5R، وترخيص CC BY 4.0.<br>
-في الأسفل ستجدون روابط تفاعلية تفتح مباشرة على مصادر Canva التي صممتها، وكويز تفاعلي مع تعليق صوتي.<br>
-<b style="color:#d4af37">بتمنى يعجبكم - اضغطوا على البطاقات لتستكشفوا!</b>
-</div>
-
-<div style="display:flex;gap:8px;justify-content:center;margin-top:12px;flex-wrap:wrap">
-<button onclick="toggleVoice()" style="background:#d4af37;color:#0f2a44;padding:8px 16px;border-radius:20px;border:none;font-weight:800;cursor:pointer;font-size:11px">🔊 تشغيل / إيقاف الترحيب</button>
-<button onclick="speakText('welcomeText')" style="background:rgba(255,255,255,.15);color:#fff;border:1px solid #d4af37;padding:8px 14px;border-radius:20px;font-weight:700;cursor:pointer;font-size:11px">📖 قراءة النص صوتياً</button>
+<!-- ترحيب صوت -->
+<div class="voice-box">
+<div style="font-size:9px;color:#d4af37;letter-spacing:2px">🎙️ نص + صوت - رسالة ترحيبية في المقدمة - اضغطي للاستماع</div>
+<div class="play-btn" id="playMain" onclick="playSection('welcomeText','statusMain','playMain')">▶️</div>
+<div id="statusMain" style="font-size:11px;color:#d4af37">اضغطي لسماع الترحيب</div>
+<div id="welcomeText" class="text-content" style="background:rgba(255,255,255,.08);color:#fff;border-color:rgba(212,175,55,.3);text-align:right">
+السلام عليكم، أنا لينا عصام أحمد عبد الرحمن من كفر الديك - سلفيت، طالبة تكنولوجيا التعليم في جامعة القدس المفتوحة.<br>
+أرحب بكم في المادة العلمية الأكاديمية الكاملة بدون أي نقص، لمساق الموارد التعليمية المفتوحة، مستوى الدراسات العليا.<br>
+كل فصل في هذه الصفحة فيه النص الكامل وزر صوت يقرأ النص بصوت عربي. استخدمي الأزرار الصغيرة بجانب كل عنوان للاستماع.
 </div>
 </div>
 
-<!-- 2- روابط تفتح على مصادر من Canva -->
+<!-- روابط Canva -->
 <div class="card">
-<h2>🔗 مصادر من Canva - اضغطي لتفتحي التصميم مباشرة</h2>
-<p style="font-size:11px;color:#666;margin-bottom:10px">كل بطاقة بتفتح مصدر Canva تفاعلي صممتيه - تقدري تغيري الروابط بروابط تصاميمك الحقيقية</p>
-
+<h2>🔗 مصادر Canva - تفتح مباشرة - نص + صوت</h2>
 <div class="canva-grid">
-
-<a class="canva-card" href="https://www.canva.com/design/DAGxxx1/view" target="_blank">
-<div style="font-size:24px">🎨</div>
-<b style="font-size:13px">1. إنفوجرافيك OER - تعريف</b><br>
-<span style="font-size:11px;color:#555">تصميم Canva فاخر كحلي وذهبي - تعريف يونسكو 2019 - قابل للتعديل - CC BY 4.0</span><br>
-<span class="badge" style="margin-top:8px;background:#d4af37;color:#0f2a44">↗️ يفتح في Canva - مصدر 1</span>
-</a>
-
-<a class="canva-card" href="https://www.canva.com/design/DAGxxx2/view" target="_blank">
-<div style="font-size:24px">🏛️</div>
-<b style="font-size:13px">2. توصية يونسكو 2019 - 5 مجالات</b><br>
-<span style="font-size:11px;color:#555">عرض تقديمي تفاعلي - بناء قدرات، سياسات، وصول، استدامة، تعاون</span><br>
-<span class="badge" style="margin-top:8px;background:#d4af37;color:#0f2a44">↗️ يفتح في Canva - مصدر 2</span>
-</a>
-
-<a class="canva-card" href="https://www.canva.com/design/DAGxxx3/view" target="_blank">
-<div style="font-size:24px">♻️</div>
-<b style="font-size:13px">3. إطار 5R - تطبيق كفر الديك</b><br>
-<span style="font-size:11px;color:#555">خريطة ذهنية - Retain, Reuse, Revise, Remix, Redistribute - مع أمثلة سلفيت</span><br>
-<span class="badge" style="margin-top:8px;background:#d4af37;color:#0f2a44">↗️ يفتح في Canva - مصدر 3</span>
-</a>
-
-<a class="canva-card" href="https://www.canva.com/design/DAGxxx4/view" target="_blank">
-<div style="font-size:24px">📜</div>
-<b style="font-size:13px">4. ترخيص CC BY 4.0</b><br>
-<span style="font-size:11px;color:#555">شرح الترخيص بالعربي - حقوقك كمصممة - يسمح بالاستخدام مع ذكر اسمك</span><br>
-<span class="badge" style="margin-top:8px;background:#d4af37;color:#0f2a44">↗️ يفتح في Canva - مصدر 4</span>
-</a>
-
-<a class="canva-card" href="https://www.canva.com/design/DAGxxx5/view" target="_blank">
-<div style="font-size:24px">💾</div>
-<b style="font-size:13px">5. GitHub Pages - الاستدامة</b><br>
-<span style="font-size:11px;color:#555">كيف يحفظ GitHub مشروعك مجاناً - نموذج استدامة OER - شرح بالصور</span><br>
-<span class="badge" style="margin-top:8px;background:#0f2a44;color:#d4af37">↗️ يفتح في Canva - مصدر 5</span>
-</a>
-
-<a class="canva-card" href="https://www.canva.com/design/DAGxxx6/view" target="_blank">
-<div style="font-size:24px">🏆</div>
-<b style="font-size:13px">6. كويز H5P - تصميم تفاعلي</b><br>
-<span style="font-size:11px;color:#555">قالب الكويز - تصميم لينا عصام - يعمل Offline - CC BY 4.0 - قابل للمشاركة</span><br>
-<span class="badge" style="margin-top:8px;background:#0f2a44;color:#d4af37">↗️ يفتح في Canva - مصدر 6</span>
-</a>
-
+<a class="canva-card" href="https://www.canva.com/templates/?query=OER%20education" target="_blank" style="padding:12px"><div style="font-size:20px">🎨</div><b>1. إنفوجرافيك OER</b><br><span style="font-size:10px">تصميم Canva - يفتح مباشرة - CC BY 4.0</span><br><span class="badge" style="margin-top:6px">↗️ يفتح في Canva</span></a>
+<a class="canva-card" href="https://www.unesco.org/en/open-educational-resources" target="_blank" style="padding:12px"><div style="font-size:20px">🏛️</div><b>2. يونسكو الرسمي OER</b><br><span style="font-size:10px">المصدر الأساسي للمادة</span><br><span class="badge" style="margin-top:6px">↗️ يفتح يونسكو</span></a>
+<a class="canva-card" href="https://creativecommons.org/licenses/by/4.0/deed.ar" target="_blank" style="padding:12px"><div style="font-size:20px">📜</div><b>3. ترخيص CC BY 4.0</b><br><span style="font-size:10px">شرح عربي رسمي</span><br><span class="badge" style="margin-top:6px">↗️ يفتح CC</span></a>
+<a class="canva-card" href="https://github.com/" target="_blank" style="padding:12px"><div style="font-size:20px">💾</div><b>4. GitHub Pages - الاستدامة</b><br><span style="font-size:10px">نموذج استدامة مجاني</span><br><span class="badge" style="margin-top:6px">↗️ يفتح GitHub</span></a>
+</div>
 </div>
 
-<div class="note">💡 <b>كيف تغيري الروابط:</b> روحي على Canva → افتحي تصميمك → Share → Copy link → الصقي الرابط مكان <code>DAGxxx</code> فوق - رح يفتح مباشرة على تصميمك!</div>
+<!-- 1 مقدمة - نص + صوت -->
+<div class="card" id="s1">
+<div class="controls"><h2 style="margin:0;flex:1">1. مقدمة</h2><div class="play-btn small" onclick="playSection('t1','st1',this)">▶️</div><span id="st1" style="font-size:10px;color:#1e4a7a"></span></div>
+<div id="t1" class="text-content">
+أصبحت الموارد التعليمية المفتوحة Open Educational Resources (OER) أحد المكونات المهمة في التحول نحو التعليم المفتوح والرقمي. وتنبع أهميتها من قدرتها على توسيع فرص الوصول إلى المعرفة، وتوفير مواد يمكن استخدامها وإعادة استخدامها وتكييفها ومشاركتها وفق شروط تراخيص مفتوحة.<br><br>
+وقد اضطلعت منظمة الأمم المتحدة للتربية والعلم والثقافة (اليونسكو) بدور محوري في تطوير الخطاب الدولي حول الموارد التعليمية المفتوحة، وفي الانتقال بالموضوع من مبادرات رقمية متفرقة إلى مجال يرتبط بالسياسات التعليمية والإنصاف وجودة التعليم وبناء القدرات والتعاون الدولي.<br><br>
+وتؤكد دراسة الموضوع من منظور الدراسات العليا أن OER ليست مجرد ملفات مجانية على الإنترنت، بل منظومة تربوية وقانونية وتقنية تتعلق بإتاحة المعرفة وبالحقوق التي تمنح للمستخدمين وبقدرتهم على إعادة توظيف المحتوى في سياقات تعليمية جديدة.<br><br>
+<b>أهداف التعلم:</b> تعريف الموارد التعليمية المفتوحة وتمييزها عن الموارد المجانية. تحليل دور اليونسكو في تطوير مفهوم وسياسات OER. فهم أهمية توصية اليونسكو بشأن OER لعام 2019. التعرف إلى مجالات العمل الخمسة الواردة في التوصية. تمييز تراخيص المشاع الإبداعي وأثرها في الاستخدام وإعادة الاستخدام. تحليل فوائد OER وتحدياتها على مستوى المعلم والمتعلم والمؤسسة. ربط الموارد التعليمية المفتوحة بمفاهيم الإنصاف والشمول والهدف الرابع للتنمية المستدامة.
+</div>
 </div>
 
-<!-- 3- المادة العلمية تفاعلية -->
-<div class="card">
-<h2>📚 المادة العلمية - تفاعلية مع صوت</h2>
-<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;font-size:11px">
-<button onclick="speakText('defText')" class="r-card" style="cursor:pointer;text-align:right">📖 <b>تعريف OER</b> - اضغطي للاستماع</button>
-<button onclick="speakText('recText')" class="r-card" style="cursor:pointer;text-align:right">🏛️ <b>توصية 2019</b> - اضغطي للاستماع</button>
+<!-- 2 مفهوم -->
+<div class="card" id="s2">
+<div class="controls"><h2 style="margin:0;flex:1">2. مفهوم الموارد التعليمية المفتوحة</h2><div class="play-btn small" onclick="playSection('t2','st2',this)">▶️</div><span id="st2" style="font-size:10px"></span></div>
+<div id="t2" class="text-content">
+تشير الموارد التعليمية المفتوحة إلى مواد التعليم والتعلم والبحث التي تكون متاحة بصورة يمكن الوصول إليها دون تكلفة، مع وجود إذن قانوني يسمح باستخدامها أو إعادة استخدامها أو تكييفها أو إعادة توزيعها، وفق شروط الترخيص أو وضع الملكية العامة.<br><br>
+وتشمل OER الكتب والمقررات الإلكترونية، والمحاضرات والعروض، والفيديوهات، والصور والرسومات التعليمية، والاختبارات والأنشطة، وخطط الدروس، وأدلة المعلمين، والمقررات المفتوحة، وغيرها من الموارد التي يمكن أن تخدم عملية التعليم والتعلم.<br><br>
+<b>خصائص OER:</b> الإتاحة: إمكانية الوصول دون حواجز مالية مباشرة. الترخيص المفتوح أو الملكية العامة: وجود أساس قانوني واضح للاستخدام. إمكانية إعادة الاستخدام: استخدام المورد في سياق تعليمي جديد. إمكانية التكييف: تعديل المحتوى ليتناسب مع احتياجات المتعلمين. إمكانية المشاركة: إعادة توزيع المورد وفق شروط الترخيص. إمكانية الدمج: دمج أجزاء من موارد متعددة في مورد أو نشاط جديد.
 </div>
-<div id="defText" style="display:none">الموارد التعليمية المفتوحة هي مواد تعليمية بترخيص مفتوح يسمح بالاحتفاظ وإعادة الاستخدام والتنقيح والمزج وإعادة التوزيع. المجانية لا تساوي الانفتاح.</div>
-<div id="recText" style="display:none">توصية يونسكو 2019 اعتمدتها 193 دولة وتقوم على خمسة مجالات: بناء القدرات، سياسات داعمة، وصول منصف، استدامة، تعاون دولي.</div>
-<p style="font-size:11px;margin-top:10px"><b>5R في كفر الديك:</b> Retain نسخة Offline | Reuse معلم سلفيت | Revise تعديل لصف رابع | Remix كويز+Canva | Redistribute GitHub CC BY 4.0</p>
 </div>
 
-<!-- 4- كويز تفاعلي مع صوت -->
-<div class="card" style="border:4px solid #d4af37;background:linear-gradient(135deg,#0f2a44,#1e4a7a);color:#fff">
-<div style="text-align:center">
-<div style="font-size:9px;color:#d4af37;letter-spacing:2px">INTERACTIVE QUIZ WITH VOICE • H5P CUSTOM • LEENA ESSAM</div>
-<h2 style="color:#d4af37;border:none;text-align:center">🏆 كويز تفاعلي مع تعليق صوتي</h2>
-<div style="background:rgba(212,175,55,.25);border-radius:20px;padding:6px 14px;display:inline-block;font-weight:800;font-size:12px"><span id="score">0 / 5</span> | <span id="qnum">سؤال 1</span></div>
+<!-- 3 الفرق -->
+<div class="card" id="s3">
+<div class="controls"><h2 style="margin:0;flex:1">3. الفرق بين المورد المجاني والمورد المفتوح</h2><div class="play-btn small" onclick="playSection('t3','st3',this)">▶️</div><span id="st3" style="font-size:10px"></span></div>
+<div id="t3" class="text-content">
+من أكثر المفاهيم التي تسبب التباسًا لدى الطلبة الخلط بين المجانية والانفتاح. فقد يكون المحتوى متاحًا مجانًا للقراءة، ولكن لا يسمح صاحبه بنسخه أو تعديله أو إعادة توزيعه. في هذه الحالة لا يكفي وصفه بأنه مورد تعليمي مفتوح.<br><br>
+<b>قاعدة أكاديمية مهمة:</b> المجانية لا تعني بالضرورة الانفتاح؛ والانفتاح يرتبط بالإتاحة وبالحقوق الممنوحة للمستخدم.<br><br>
+جدول الفرق: المعيار | مورد مجاني | مورد مفتوح. الوصول: قد يكون مجانيًا | متاح وفق شروط الانفتاح. التعديل: قد يكون ممنوعًا | يسمح به إذا أجازه الترخيص. إعادة التوزيع: قد تكون ممنوعة | ممكنة وفق الترخيص. الحقوق: تحددها شروط صاحب المحتوى | تحددها رخصة مفتوحة أو الملكية العامة. الفلسفة: إتاحة الوصول | إتاحة الوصول مع توسيع حقوق الاستخدام.
 </div>
-<div id="quiz-box" style="background:#fff;color:#0f2a44;border-radius:14px;padding:16px;margin:14px 0;min-height:200px"></div>
-<div style="text-align:center"><button id="nextBtn" onclick="nextQ()" style="display:none;background:#d4af37;color:#0f2a44;padding:10px 20px;border-radius:10px;border:none;font-weight:800;cursor:pointer">التالي ➡️</button><div id="finalResult" style="display:none;background:#fff;color:#0f2a44;border-radius:14px;padding:16px;margin-top:10px"></div></div>
+<table>
+<tr><th>المعيار</th><th>مورد مجاني</th><th>مورد مفتوح</th></tr>
+<tr><td>الوصول</td><td>قد يكون مجانيًا</td><td>متاح وفق شروط الانفتاح</td></tr>
+<tr><td>التعديل</td><td>قد يكون ممنوعًا</td><td>يسمح به إذا أجازه الترخيص</td></tr>
+<tr><td>إعادة التوزيع</td><td>قد تكون ممنوعة</td><td>ممكنة وفق الترخيص</td></tr>
+<tr><td>الحقوق</td><td>تحددها شروط صاحب المحتوى</td><td>تحددها رخصة مفتوحة أو الملكية العامة</td></tr>
+<tr><td>الفلسفة</td><td>إتاحة الوصول</td><td>إتاحة الوصول مع توسيع حقوق الاستخدام</td></tr>
+</table>
 </div>
 
-<div class="card" style="text-align:center;background:#0f2a44;color:#fff;border:3px solid #d4af37">
-<p style="color:#d4af37;font-weight:900">لينا عصام - QOU سلفيت - كفر الديك - تكنولوجيا التعليم</p>
-<p style="font-size:10px">تفاعلي مع صوت + روابط Canva مباشرة + H5P + GitHub + CC BY 4.0</p>
+<!-- 4-6 -->
+<div class="card" id="s4">
+<div class="controls"><h2 style="margin:0;flex:1">4. اليونسكو والموارد التعليمية المفتوحة</h2><div class="play-btn small" onclick="playSection('t4','st4',this)">▶️</div><span id="st4" style="font-size:10px"></span></div>
+<div id="t4" class="text-content">
+تتعامل اليونسكو مع الموارد التعليمية المفتوحة ضمن رؤية أوسع تتصل بحق الوصول إلى التعليم والمعرفة، وتحسين فرص التعلم، ودعم المعلمين، وتشجيع التعاون بين الدول والمؤسسات التعليمية. وقد تطور اهتمام المنظمة بالموضوع من نشر وتعزيز المبادرات المفتوحة إلى دعم الأطر والسياسات الدولية.<br><br>
+<b>أبرز أدوار اليونسكو:</b> تعزيز الوعي الدولي بمفهوم الموارد التعليمية المفتوحة. دعم التعاون وتبادل الخبرات والممارسات بين الدول والمؤسسات. تشجيع بناء القدرات لدى المعلمين وصناع السياسات والمنتجين. دعم تطوير سياسات وطنية ومؤسسية للموارد المفتوحة. ربط OER بقضايا الإنصاف والشمول وجودة التعليم. تعزيز النقاش حول الاستدامة والتمويل والجودة والحقوق.
+</div>
+</div>
+
+<div class="card" id="s5">
+<div class="controls"><h2 style="margin:0;flex:1">5. توصية اليونسكو بشأن OER لعام 2019</h2><div class="play-btn small" onclick="playSection('t5','st5',this)">▶️</div><span id="st5" style="font-size:10px"></span></div>
+<div id="t5" class="text-content">
+تمثل توصية اليونسكو بشأن الموارد التعليمية المفتوحة لعام 2019 محطة أساسية في تطوير الحوكمة الدولية للموضوع. فهي توفر إطارًا إرشاديًا للدول وأصحاب المصلحة بهدف تعزيز إنتاج الموارد المفتوحة واستخدامها ومشاركتها وبناء بيئة داعمة لها.<br><br>
+وتتجاوز التوصية فكرة توفير المحتوى، لتتناول قضايا بناء القدرات والسياسات، والوصول الشامل والمنصف، والاستدامة، والتعاون الدولي. ولذلك فإن فهمها مهم لطلبة الدراسات العليا لأنها تربط بين البعد التربوي والبعد المؤسسي والسياساتي للموارد المفتوحة.
+</div>
+</div>
+
+<div class="card" id="s6">
+<div class="controls"><h2 style="margin:0;flex:1">6. مجالات العمل الخمسة في توصية اليونسكو</h2><div class="play-btn small" onclick="playSection('t6','st6',this)">▶️</div><span id="st6" style="font-size:10px"></span></div>
+<div id="t6" class="text-content">
+<b>أولًا: بناء القدرات:</b> تطوير مهارات المعلمين والمتعلمين وصناع السياسات والمؤسسات في إنشاء OER واستخدامها وتكييفها وترخيصها. تطبيق سلفيت: كويز H5P تفاعلي باسم لينا عصام.<br><br>
+<b>ثانيًا: تطوير سياسات داعمة:</b> وضع أطر وسياسات تشجع إنتاج الموارد المفتوحة وتمويلها واستخدامها داخل المؤسسات التعليمية. تطبيق: CC BY 4.0.<br><br>
+<b>ثالثًا: ضمان الوصول الشامل والمنصف:</b> معالجة حواجز اللغة والإعاقة والاتصال والأجهزة والقدرة الرقمية لضمان الاستفادة الفعلية من الموارد. تطبيق: مكتبة Offline USB لكفر الديك بدون إنترنت.<br><br>
+<b>رابعًا: الاستدامة:</b> تطوير نماذج تمويل وإنتاج وتحديث وحفظ للموارد المفتوحة حتى لا تكون المبادرات قصيرة الأجل. تطبيق: GitHub Pages مجاني.<br><br>
+<b>خامسًا: التعاون الدولي:</b> تشجيع تبادل الموارد والخبرات والترجمة والبحث وبناء المجتمعات والشراكات بين الدول والمؤسسات. تطبيق: Canva مشارك.
+</div>
+</div>
+
+<div class="card" id="s7">
+<div class="controls"><h2 style="margin:0;flex:1">7. الموارد المفتوحة والهدف الرابع للتنمية المستدامة</h2><div class="play-btn small" onclick="playSection('t7','st7',this)">▶️</div><span id="st7" style="font-size:10px"></span></div>
+<div id="t7" class="text-content">
+ترتبط الموارد التعليمية المفتوحة ارتباطًا وثيقًا بالهدف الرابع من أهداف التنمية المستدامة، الذي يدعو إلى ضمان تعليم جيد ومنصف وشامل وتعزيز فرص التعلم مدى الحياة للجميع. ويمكن أن تسهم OER في هذا المسار عبر تقليل بعض حواجز الوصول إلى المواد التعليمية، ودعم المعلمين، وتسهيل مشاركة المعرفة.<br><br>
+ومع ذلك، ينبغي تجنب المبالغة في الأثر؛ فالموارد المفتوحة لا تكفي وحدها لتحقيق العدالة التعليمية. فالنتائج تتأثر أيضًا بالبنية التحتية، والاتصال، والأجهزة، والمهارات الرقمية، وجودة التعليم، وسياسات الدولة والمؤسسة، وإمكانية الوصول لذوي الإعاقة.
+</div>
+</div>
+
+<div class="card" id="s8">
+<div class="controls"><h2 style="margin:0;flex:1">8. تراخيص المشاع الإبداعي وحقوق الاستخدام</h2><div class="play-btn small" onclick="playSection('t8','st8',this)">▶️</div><span id="st8" style="font-size:10px"></span></div>
+<div id="t8" class="text-content">
+تساعد تراخيص Creative Commons أصحاب المحتوى على تحديد الحقوق التي يمنحونها للمستخدمين. وتعد معرفة الترخيص خطوة أساسية قبل إعادة استخدام أي مادة تعليمية. قبل استخدام أي مورد، يجب التحقق من نوع الترخيص، وحقوق النسخ والتعديل وإعادة التوزيع، ومتطلبات نسب العمل، وأي قيود تجارية أو شروط أخرى.<br><br>
+CC BY يسمح بالاستخدام وإعادة التوزيع والتعديل مع نسب العمل إلى صاحبه. CC BY-SA يسمح بالاستخدام والتعديل مع اشتراط مشاركة المشتقات بالشروط نفسها. CC BY-NC يسمح بالاستخدام مع قيد عدم الاستخدام التجاري. CC BY-ND يسمح بإعادة التوزيع لكن دون إنشاء أعمال مشتقة. CC BY-NC-SA عدم تجاري مع المشاركة بالمثل. CC BY-NC-ND عدم تجاري ودون أعمال مشتقة.
+</div>
+<table>
+<tr><th>الترخيص</th><th>المعنى العام</th></tr>
+<tr><td>CC BY</td><td>يسمح بالاستخدام وإعادة التوزيع والتعديل مع نسب العمل إلى صاحبه.</td></tr>
+<tr><td>CC BY-SA</td><td>يسمح بالاستخدام والتعديل مع اشتراط مشاركة المشتقات بالشروط نفسها.</td></tr>
+<tr><td>CC BY-NC</td><td>يسمح بالاستخدام مع قيد عدم الاستخدام التجاري.</td></tr>
+<tr><td>CC BY-ND</td><td>يسمح بإعادة التوزيع لكن دون إنشاء أعمال مشتقة.</td></tr>
+</table>
+</div>
+
+<div class="card" id="s9">
+<div class="controls"><h2 style="margin:0;flex:1">9. الموارد المفتوحة والممارسات التعليمية المفتوحة</h2><div class="play-btn small" onclick="playSection('t9','st9',this)">▶️</div><span id="st9" style="font-size:10px"></span></div>
+<div id="t9" class="text-content">
+لا ينبغي اختزال OER في تحميل ملف مفتوح. فهناك بعد ممارساتي يتمثل في كيفية استخدام الموارد وتكييفها وإعادة إنتاج المعرفة بصورة تشاركية. ويمكن للمعلم أن ينتقل من دور المستهلك إلى دور المستخدم والمقيّم والمعدل والمنتج والناشر.<br><br>
+مثال: يمكن لأستاذ جامعي أن يختار فصلًا من كتاب مفتوح، ويعيد تنظيمه، ويضيف أمثلة محلية من سلفيت، ويصمم نشاطًا للطلاب، ثم ينشر النسخة الجديدة وفق ترخيص مناسب. هنا تتحول الموارد المفتوحة إلى ممارسة تعليمية مفتوحة قائمة على المشاركة والإنتاج.
+</div>
+</div>
+
+<div class="card" id="s10">
+<div class="controls"><h2 style="margin:0;flex:1">10. أدوار المعلم والطالب والمؤسسة</h2><div class="play-btn small" onclick="playSection('t10','st10',this)">▶️</div><span id="st10" style="font-size:10px"></span></div>
+<div id="t10" class="text-content">
+المعلم: البحث، التقييم، التكييف، الإنتاج، الترخيص، المشاركة. الطالب: الوصول، الاستخدام، النقد، الإنتاج، التعاون، المشاركة. الجامعة: السياسات، التدريب، التمويل، الجودة، البنية التحتية، الدعم. صانع السياسة: التشريع، الاستراتيجيات، التمويل، الحوافز، الشراكات.
+</div>
+<table>
+<tr><th>الفاعل</th><th>الدور في منظومة OER</th></tr>
+<tr><td>المعلم</td><td>البحث، التقييم، التكييف، الإنتاج، الترخيص، المشاركة.</td></tr>
+<tr><td>الطالب</td><td>الوصول، الاستخدام، النقد، الإنتاج، التعاون، المشاركة.</td></tr>
+<tr><td>الجامعة</td><td>السياسات، التدريب، التمويل، الجودة، البنية التحتية، الدعم.</td></tr>
+</table>
+</div>
+
+<div class="card" id="s11">
+<div class="controls"><h2 style="margin:0;flex:1">11. فوائد الموارد التعليمية المفتوحة</h2><div class="play-btn small" onclick="playSection('t11','st11',this)">▶️</div><span id="st11" style="font-size:10px"></span></div>
+<div id="t11" class="text-content">
+تقليل بعض التكاليف المرتبطة بالحصول على المواد التعليمية. توسيع الوصول إلى المعرفة والمصادر التعليمية. إتاحة تكييف المحتوى وفق احتياجات المتعلمين والسياقات المحلية. تعزيز التعاون والمشاركة بين المعلمين والمؤسسات. دعم الابتكار في تصميم الأنشطة والمقررات. إتاحة فرص للتحديث المستمر وإعادة إنتاج الموارد. دعم التعلم مدى الحياة والمجتمعات التعليمية.
+</div>
+</div>
+
+<div class="card" id="s12">
+<div class="controls"><h2 style="margin:0;flex:1">12. تحديات OER</h2><div class="play-btn small" onclick="playSection('t12','st12',this)">▶️</div><span id="st12" style="font-size:10px"></span></div>
+<div id="t12" class="text-content">
+الجودة: ليس كل مورد مفتوح عالي الجودة؛ لذا يلزم تقييم علمي وتربوي. الملكية الفكرية: قد يحدث سوء فهم للتراخيص أو استخدام غير قانوني للمحتوى. الاستدامة: المورد يحتاج إلى تحديث وصيانة وتمويل وحفظ. الفجوة الرقمية: الوصول يتطلب أجهزة واتصالًا ومهارات رقمية مناسبة. اللغة والسياق: قد لا يناسب المورد سياقًا لغويًا أو ثقافيًا مختلفًا. مهارات المعلمين: إنتاج وتكييف OER يحتاج إلى كفايات رقمية وقانونية وتربوية.
+</div>
+</div>
+
+<div class="card" id="s13">
+<div class="controls"><h2 style="margin:0;flex:1">13. دراسة حالة تطبيقية</h2><div class="play-btn small" onclick="playSection('t13','st13',this)">▶️</div><span id="st13" style="font-size:10px"></span></div>
+<div id="t13" class="text-content">
+الحالة: أستاذ جامعي يريد تطوير وحدة دراسية بعنوان الذكاء الاصطناعي في التعليم. بدل الاعتماد على مصدر تجاري واحد، يقرر بناء الوحدة من موارد مفتوحة. يحدد نواتج التعلم المطلوبة. يبحث عن موارد مفتوحة موثوقة. يتحقق من جودة كل مورد ومن الترخيص. يختار المواد التي يمكن تكييفها. يضيف أمثلة وأنشطة مرتبطة بسياق الطلبة. ينتج أنشطة أو فيديوهات أو أسئلة جديدة. يوثق مصادر المواد المستخدمة. ينشر الوحدة بترخيص واضح إذا كانت حقوق المواد تسمح بذلك. يطلب من الطلبة تقييم الموارد والمساهمة في تحسينها.<br><br>
+التحليل: يوضح المثال أن OER ليست مجرد بديل مجاني للكتاب، بل يمكن أن تكون مدخلًا لإعادة تصميم خبرة التعلم على أساس المشاركة والتكييف وإعادة الاستخدام.
+</div>
+</div>
+
+<div class="card" id="s14">
+<div class="controls"><h2 style="margin:0;flex:1">14. أسئلة نقاش وإجابات نموذجية</h2><div class="play-btn small" onclick="playSection('t14','st14',this)">▶️</div><span id="st14" style="font-size:10px"></span></div>
+<div id="t14" class="text-content">
+سؤال: هل كل مورد مجاني يعد موردًا تعليميًا مفتوحًا؟ الإجابة النموذجية: لا. المجانية تعني عدم وجود تكلفة مباشرة للوصول، بينما الانفتاح يرتبط أيضًا بالحقوق التي يسمح بها الترخيص، مثل الاستخدام والتعديل وإعادة التوزيع.<br><br>
+سؤال: كيف يمكن أن تسهم OER في العدالة التعليمية؟ الإجابة النموذجية: يمكن أن تقلل بعض الحواجز الاقتصادية أمام الحصول على المواد، وتتيح موارد قابلة للتكييف، لكنها لا تكفي وحدها لأن العدالة تتأثر بالبنية التحتية واللغة والمهارات والسياسات وجودة التعليم.<br><br>
+سؤال: ما أهمية توصية اليونسكو لعام 2019؟ الإجابة: أنها توفر إطارًا دوليًا لتطوير السياسات والممارسات المرتبطة بالموارد المفتوحة، وتتناول بناء القدرات والوصول والإنصاف والاستدامة والتعاون الدولي.<br><br>
+سؤال: ما دور المعلم في نموذج OER؟ الإجابة: المعلم مستخدم ومقيّم ومكيّف ومنتج ومشارك، وليس مجرد مستهلك للمحتوى.<br><br>
+سؤال: لماذا تعد التراخيص المفتوحة مهمة؟ الإجابة: لأنها تحدد الحقوق القانونية التي تمنح للمستخدم وتوضح ما يمكن فعله بالمورد من نسخ أو تعديل أو مشاركة.<br><br>
+سؤال: هل تكفي OER لتحقيق الهدف الرابع للتنمية المستدامة؟ الإجابة: لا. يمكنها الإسهام في الوصول والإنصاف وجودة التعليم، لكنها تعمل ضمن منظومة أوسع تشمل المعلمين والبنية التحتية والسياسات والتمويل.
+</div>
+</div>
+
+<div class="card" id="s15">
+<div class="controls"><h2 style="margin:0;flex:1">15. نشاط تفاعلي للمحاضرة - هل هذا المورد مفتوح فعلًا؟</h2><div class="play-btn small" onclick="playSection('t15','st15',this)">▶️</div><span id="st15" style="font-size:10px"></span></div>
+<div id="t15" class="text-content">
+عنوان النشاط: هل هذا المورد مفتوح فعلًا؟ يقسم الطلبة إلى مجموعات صغيرة. تقدم لكل مجموعة ثلاثة موارد رقمية مختلفة. تطلب من كل مجموعة تحديد ما إذا كان المورد مجانيًا فقط أم مفتوحًا. تفحص المجموعة الترخيص وحقوق الاستخدام والتعديل والمشاركة. تعرض كل مجموعة قرارها مع تبرير قانوني وتربوي. يناقش الصف الفرق بين الوصول المجاني والانفتاح. المخرج المتوقع: قدرة الطالب على قراءة الترخيص وتحليل المورد بدل الاكتفاء بكونه متاحًا على الإنترنت.
+</div>
+</div>
+
+<div class="card" id="s16">
+<div class="controls"><h2 style="margin:0;flex:1">16. خلاصة واستنتاجات</h2><div class="play-btn small" onclick="playSection('t16','st16',this)">▶️</div><span id="st16" style="font-size:10px"></span></div>
+<div id="t16" class="text-content">
+تمثل الموارد التعليمية المفتوحة تحولًا في طريقة إنتاج المعرفة التعليمية وتوزيعها واستخدامها. وتكمن أهميتها في الجمع بين الإتاحة والحقوق القانونية وإمكانية إعادة الاستخدام والتكييف والمشاركة.<br><br>
+ويظهر دور اليونسكو في تحويل OER إلى قضية دولية مرتبطة بالسياسات التعليمية والإنصاف والشمول وبناء القدرات والاستدامة والتعاون الدولي، وتعد توصية اليونسكو لعام 2019 من أبرز المراجع في هذا المجال.<br><br>
+ومن منظور الدراسات العليا، ينبغي التعامل مع OER باعتبارها موضوعًا متعدد الأبعاد يجمع بين التربية والتكنولوجيا والسياسات والملكية الفكرية والاقتصاد المعرفي، وليس مجرد وسيلة للحصول على مواد مجانية.
+</div>
+</div>
+
+<div class="card" id="s17">
+<div class="controls"><h2 style="margin:0;flex:1">17. مراجع مختارة</h2><div class="play-btn small" onclick="playSection('t17','st17',this)">▶️</div><span id="st17" style="font-size:10px"></span></div>
+<div id="t17" class="text-content">
+UNESCO 2019 Recommendation on Open Educational Resources. UNESCO 2023 Open Educational Resources. UNESCO 2021 Guidelines on the Development of OER Policies. Creative Commons About The Licenses. United Nations Sustainable Development Goal 4 Quality Education. Open Education Global Resources and guidance on open education and OER.
+</div>
+<ul style="font-size:11px;margin-right:20px">
+<li>UNESCO. (2019). Recommendation on Open Educational Resources (OER). UNESCO.</li><li>UNESCO. (2023). Open Educational Resources. UNESCO.</li><li>UNESCO. (2021). Guidelines on the Development of OER Policies.</li><li>Creative Commons. About The Licenses.</li><li>United Nations. SDG 4: Quality Education.</li><li>Open Education Global.</li>
+</ul>
+</div>
+
+<div class="card" style="text-align:center;background:var(--navy);color:#fff;border:3px solid var(--gold)">
+<p style="color:var(--gold);font-weight:900">لينا عصام أحمد عبد الرحمن - كفر الديك - سلفيت - تكنولوجيا التعليم - QOU - 2026</p>
+<p style="font-size:10px">نص + صوت لكل فصل - 17 فصل بدون نقص - Canva - CC BY 4.0 - كل فقرة فيها زر صوت</p>
 </div>
 
 </div>
 
 <script>
-// صوت ترحيبي
-let isPlaying=false;
+// Progress
+window.addEventListener('scroll',()=>{let s=(window.scrollY/(document.body.scrollHeight-window.innerHeight))*100;document.getElementById('progress').style.width=s+'%';});
+// Voice system - نص + صوت
 let currentUtter=null;
-function toggleVoice(){
-if(isPlaying){stopVoice();return;}
-playVoice(document.getElementById('welcomeText').innerText,'status','playBtn');
-}
-function playVoice(text,statusId,btnId){
-if(!('speechSynthesis' in window)){document.getElementById(statusId).innerText='⚠️ المتصفح لا يدعم الصوت';return;}
-speechSynthesis.cancel();
-currentUtter=new SpeechSynthesisUtterance(text);
-currentUtter.lang='ar-SA';
-currentUtter.rate=0.9;
-currentUtter.pitch=1.05;
+let currentBtn=null;
+function playSection(textId,statusId,btnElement){
+let textEl=document.getElementById(textId);
+let text=textEl.innerText || textEl.textContent;
+// stop previous
+if(window.speechSynthesis.speaking){window.speechSynthesis.cancel(); if(currentBtn){currentBtn.innerText='▶️'; currentBtn.classList.remove('playing');} if(btnElement===currentBtn){currentBtn=null; document.getElementById(statusId).innerText='⏹️ تم الإيقاف'; return;}}
+if(!('speechSynthesis' in window)){alert('المتصفح لا يدعم الصوت'); return;}
+let utter=new SpeechSynthesisUtterance(text);
+utter.lang='ar-SA';
+utter.rate=0.92;
+utter.pitch=1;
 let voices=speechSynthesis.getVoices();
-let ar=voices.find(v=>v.lang.includes('ar'));
-if(ar) currentUtter.voice=ar;
-currentUtter.onstart=()=>{isPlaying=true;document.getElementById(statusId).innerText='🔊 يتم التشغيل الآن...';document.getElementById(btnId).classList.add('playing');document.getElementById(btnId).innerText='⏸️';}
-currentUtter.onend=()=>{isPlaying=false;document.getElementById(statusId).innerText='✅ انتهى - اضغطي للاستماع مرة ثانية';document.getElementById(btnId).classList.remove('playing');document.getElementById(btnId).innerText='▶️';}
-currentUtter.onerror=()=>{isPlaying=false;document.getElementById(statusId).innerText='⚠️ خطأ - جربي مرة ثانية';}
-speechSynthesis.speak(currentUtter);
+let arVoice=voices.find(v=>v.lang.includes('ar'));
+if(arVoice) utter.voice=arVoice;
+currentBtn=typeof btnElement==='string'?document.getElementById(btnElement):btnElement;
+let statusEl=document.getElementById(statusId);
+utter.onstart=()=>{statusEl.innerText='🔊 يتم التشغيل...'; if(currentBtn){currentBtn.innerText='⏸️'; currentBtn.classList.add('playing');}};
+utter.onend=()=>{statusEl.innerText='✅ انتهى'; if(currentBtn){currentBtn.innerText='▶️'; currentBtn.classList.remove('playing');} currentBtn=null;};
+utter.onerror=()=>{statusEl.innerText='⚠️ خطأ'; if(currentBtn){currentBtn.innerText='▶️'; currentBtn.classList.remove('playing');}};
+currentUtter=utter;
+window.speechSynthesis.speak(utter);
 }
-function speakText(id){
-let el=document.getElementById(id);
-let txt=el.innerText || el.textContent;
-if('speechSynthesis' in window){speechSynthesis.cancel();let u=new SpeechSynthesisUtterance(txt);u.lang='ar-SA';u.rate=0.95;let vs=speechSynthesis.getVoices();let ar=vs.find(v=>v.lang.includes('ar'));if(ar) u.voice=ar;speechSynthesis.speak(u);}
-}
-function stopVoice(){if('speechSynthesis' in window){speechSynthesis.cancel();isPlaying=false;document.getElementById('status').innerText='⏹️ تم الإيقاف';document.getElementById('playBtn').classList.remove('playing');document.getElementById('playBtn').innerText='▶️';}}
-window.speechSynthesis.onvoiceschanged=()=>{speechSynthesis.getVoices();};
-
-// كويز
-const questions=[
-{q:"ما الفرق بين المجاني والمفتوح؟",o:["لا فرق","المجاني قراءة فقط، المفتوح يسمح بـ 5R - المجانية ≠ الانفتاح","المفتوح أغلى"],a:1,info:"أهم نقطة!"},
-{q:"توصية اليونسكو 2019؟",o:["إعلان باريس","وثيقة دولية 193 دولة - 5 مجالات","ليوبليانا"],a:1,info:"الوثيقة المرجعية"},
-{q:"المجالات الخمسة؟",o:["كتب فقط","بناء قدرات، سياسات، وصول، استدامة، تعاون","إنترنت"],a:1,info:"لب الامتحان"},
-{q:"Retain؟",o:["حذف","احتفاظ بنسخة Offline - مهم لكفر الديك","بيع"],a:1,info:"بدون إنترنت"},
-{q:"ترخيص مشروعك؟",o:["محفوظ","CC BY 4.0 مع ذكر اسم لينا","بدون"],a:1,info:"الأمثل"}
-];
-let cur=0,score=0;
-function showQ(){
-let qq=questions[cur];
-document.getElementById('qnum').innerText=`سؤال ${cur+1} من 5`;
-document.getElementById('score').innerText=`${score} / 5`;
-let html=`<h3 style="color:#0f2a44">${cur+1}. ${qq.q}</h3><div style="display:grid;gap:8px;margin-top:10px">`;
-qq.o.forEach((opt,i)=>{html+=`<button onclick="check(${i})" class="optBtn" style="text-align:right;padding:11px;border:2px solid #d4af37;border-radius:10px;background:#fdfcf8;cursor:pointer;font-family:Tajawal">${String.fromCharCode(1571+i)}. ${opt}</button>`;});
-html+=`</div><div id="feedback" style="margin-top:10px"></div>`;
-document.getElementById('quiz-box').innerHTML=html;
-document.getElementById('nextBtn').style.display='none';
-}
-function check(i){
-let qq=questions[cur];
-let fb=document.getElementById('feedback');
-let btns=document.querySelectorAll('.optBtn');
-btns.forEach(b=>b.disabled=true);
-if(i===qq.a){score++; fb.innerHTML=`<div style="background:#d4edda;color:#155724;padding:10px;border-radius:8px">✅ صحيح! ${qq.info}</div>`; btns[i].style.background='#d4edda'; speakTextDirect('إجابة صحيحة! '+qq.info);}
-else{fb.innerHTML=`<div style="background:#f8d7da;color:#721c24;padding:10px;border-radius:8px">❌ خطأ. الصح: ${qq.o[qq.a]}<br>💡 ${qq.info}</div>`; btns[i].style.background='#f8d7da'; btns[qq.a].style.background='#d4edda'; speakTextDirect('إجابة خاطئة. الصحيح '+qq.o[qq.a]);}
-document.getElementById('score').innerText=`${score} / 5`;
-document.getElementById('nextBtn').style.display='inline-block';
-if(cur===4) document.getElementById('nextBtn').innerText='النتيجة 🏆';
-}
-function speakTextDirect(t){if('speechSynthesis' in window){let u=new SpeechSynthesisUtterance(t);u.lang='ar-SA';u.rate=1;speechSynthesis.speak(u);}}
-function nextQ(){
-cur++;
-if(cur<questions.length){showQ();}
-else{
-document.getElementById('quiz-box').style.display='none';
-document.getElementById('nextBtn').style.display='none';
-let res=document.getElementById('finalResult');
-res.style.display='block';
-let msg=score>=4?"🏆 ممتازة يا لينا! A+":"👍 جيدة!";
-res.innerHTML=`<h2 style="color:#0f2a44">${msg}</h2><div style="font-size:42px;font-weight:900">${score}/5</div><p>لينا عصام - QOU</p><button onclick="cur=0;score=0;document.getElementById('quiz-box').style.display='block';document.getElementById('finalResult').style.display='none';showQ();" style="background:#0f2a44;color:#d4af37;padding:8px 16px;border-radius:8px;border:none;font-weight:800;margin-top:8px;cursor:pointer">🔄 عيدي</button>`;
-speakTextDirect(msg+' حصلتي على '+score+' من 5');
-}
-}
-showQ();
+window.speechSynthesis.onvoiceschanged=()=>{window.speechSynthesis.getVoices();};
 </script>
 </body>
 </html>
