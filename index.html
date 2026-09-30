@@ -80,4 +80,67 @@ body{background:#fdfcf8;color:#0f2a44;line-height:1.8}
 
 <!-- 5- معلومات -->
 <div class="card" style="text-align:center;background:linear-gradient(135deg,#0f2a44,#1e4a7a);color:#fff;border:3px solid #d4af37">
-<p style="color:#d4af37;font-weight:900;font-size:18px">لينا عص
+<p style="color:#d4af37;font-weight:900;font-size:18px">لينا عصام أحمد عبد الرحمن</p>
+<p>كفر الديك - محافظة سلفيت - فلسطين</p>
+<p style="font-size:12px;margin-top:6px">مشروع OER سلفيت 2026 - بإشراف د. محمود حوامدة</p>
+<p style="font-size:11px;margin-top:10px"><span class="badge" style="background:#d4af37;color:#0f2a44">Canva للتصميم الفاخر</span> <span class="badge">H5P للتفاعل</span> <span class="badge">GitHub Pages للنشر المجاني</span> <span class="badge">CC BY 4.0</span></p>
+<p style="font-size:10px;margin-top:10px;color:#aaa">هذا الموقع هو مثال OER حقيقي: مفتوح، مجاني، قابل للتعديل، يعمل بدون إنترنت، يحقق 5R</p>
+</div>
+
+</div>
+
+<script>
+const questions=[
+{q:"حسب توصية يونسكو 2019، ما معنى OER؟",o:["كتب مدفوعة لا يمكن نسخها","مواد تعليمية مفتوحة بترخيص مفتوح تسمح بالوصول والاحتفاظ والتعديل والتوزيع مجاناً","فيديوهات يوتيوب فقط"],a:1,info:"تعريف يونسكو الرسمي من الفيديو فوق!"},
+{q:"كم عدد الـ R في إطار 5R وما معنى Retain؟",o:["3R - Retain يعني الحذف","5R - Retain يعني حقك تحتفظي بنسخة محلية على جهازك","4R - Retain يعني البيع"],a:1,info:"Retain مهم جداً لمدارس كفر الديك بدون إنترنت - تحتفظي بنسخة USB"},
+{q:"مدرسة في كفر الديك بدون إنترنت - أي حل OER هو الأفضل؟",o:["نطبع كتب بـ 1000 شيكل","نعمل مكتبة رقمية محلية Offline على كمبيوتر المدرسة - تعمل بدون إنترنت","نبعت الطلاب يتعلموا في سلفيت"],a:1,info:"ممتاز! المكتبة المحلية Offline تطبق Retain + Redistribute - حل A+ حسب يونسكو"},
+{q:"شو علاقة H5P و GitHub في مشروعك؟",o:["نفس الشي - الاثنين نفس الوظيفة","H5P بيعمل التفاعل (كويز)، GitHub بيعمل الحفظ والنشر المجاني - مع بعض بيحققوا OER","GitHub هو الي بيعمل الكويز"],a:1,info:"صح! H5P = الطباخ الي بيعمل التفاعل، GitHub = المطعم الي بيحفظ وبيعرض للعالم"},
+{q:"أي ترخيص استخدمتي لمشروع OER سلفيت؟ ولماذا؟",o:["جميع الحقوق محفوظة - ممنوع النسخ","CC BY 4.0 - يسمح للجميع بالاستخدام والتعديل والتوزيع مع ذكر اسم لينا عصام - هاد ترخيص OER المثالي","بدون ترخيص"],a:1,info:"CC BY 4.0 هو ترخيص OER حسب يونسكو - أي معلم في سلفيت بيقدر يعدل ويوزع مع ذكر اسمك!"}
+];
+let cur=0,score=0;
+function showQ(){
+let qq=questions[cur];
+document.getElementById('qnum').innerText=`سؤال ${cur+1} من 5`;
+document.getElementById('score').innerText=`النقاط: ${score} / 5`;
+let html=`<h3 style="color:#0f2a44;font-size:16px">${cur+1}. ${qq.q}</h3><div style="display:grid;gap:10px;margin-top:14px">`;
+qq.o.forEach((opt,i)=>{
+html+=`<button onclick="check(${i})" class="optBtn" style="text-align:right;padding:14px;border:2px solid #d4af37;border-radius:12px;background:#fdfcf8;cursor:pointer;font-family:Tajawal;font-size:13px">${String.fromCharCode(1571+i)}. ${opt}</button>`;
+});
+html+=`</div><div id="feedback" style="margin-top:14px"></div>`;
+document.getElementById('quiz-box').innerHTML=html;
+document.getElementById('nextBtn').style.display='none';
+}
+function check(i){
+let qq=questions[cur];
+let fb=document.getElementById('feedback');
+let btns=document.querySelectorAll('.optBtn');
+btns.forEach(b=>b.disabled=true);
+if(i===qq.a){
+score++; fb.innerHTML=`<div style="background:#d4edda;color:#155724;padding:12px;border-radius:10px;border:1px solid #c3e6cb">✅ صحيح! ${qq.info}</div>`;
+btns[i].style.background='#d4edda'; btns[i].style.borderColor='#28a745';
+}else{
+fb.innerHTML=`<div style="background:#f8d7da;color:#721c24;padding:12px;border-radius:10px;border:1px solid #f5c6cb">❌ خطأ. الإجابة الصحيحة: ${qq.o[qq.a]}<br>💡 ${qq.info}</div>`;
+btns[i].style.background='#f8d7da'; btns[i].style.borderColor='#dc3545';
+btns[qq.a].style.background='#d4edda'; btns[qq.a].style.borderColor='#28a745';
+}
+document.getElementById('score').innerText=`النقاط: ${score} / 5`;
+document.getElementById('nextBtn').style.display='inline-block';
+if(cur===4){document.getElementById('nextBtn').innerText='شوفي النتيجة النهائية 🏆';}
+}
+function nextQ(){
+cur++;
+if(cur<questions.length){showQ();}
+else{
+document.getElementById('quiz-box').style.display='none';
+document.getElementById('nextBtn').style.display='none';
+let res=document.getElementById('finalResult');
+res.style.display='block';
+let msg=score>=4?"🏆 ممتازة يا لينا! انتي خبيرة OER سلفيت! تقدير A+":score>=3?"👍 جيدة جداً يا لينا - قربتي تصيري خبيرة OER!":"💪 بدك مراجعة بسيطة يا لينا - ارجعي شوفي فيديو يونسكو فوق";
+let color=score>=4?"#d4af37":"#0f2a44";
+res.innerHTML=`<h2 style="color:${color}">${msg}</h2><div style="font-size:56px;font-weight:900;color:#0f2a44;margin:10px 0">${score}/5</div><p style="font-weight:800">لينا عصام أحمد عبد الرحمن - كفر الديك - سلفيت</p><p style="font-size:12px;margin-top:8px">هذا الكويز هو H5P مخصص كتبتيه بالكود - يعمل Offline بدون إنترنت<br>يحقق Retain + Redistribute حسب يونسكو - CC BY 4.0<br>يمكن لأي معلم في سلفيت نسخه وتعديله (Remix) مع ذكر اسمك!</p><button class="btn" onclick="cur=0;score=0;document.getElementById('quiz-box').style.display='block';document.getElementById('finalResult').style.display='none';showQ();" style="background:#0f2a44;color:#d4af37;margin-top:14px">🔄 عيدي الكويز من جديد</button><br><br><span class="badge" style="background:#0f2a44;color:#d4af37;padding:8px 16px">تم إنشاء هذا الكويز بواسطة لينا عصام - GitHub Pages + H5P Logic - Luxury Design 2026</span>`;
+}
+}
+showQ();
+</script>
+</body>
+</html>
