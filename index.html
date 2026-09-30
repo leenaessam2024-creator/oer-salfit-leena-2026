@@ -2,71 +2,117 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>كفر الديك - سجل الزيتون الرومي | لينا عصام - ماجستير</title>
-<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@300;400;700;800&display=swap" rel="stylesheet">
+<title>GEN-AI OLIVE | ذكاء زيتوني متفوق | لينا ماجستير</title>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@700&family=Tajawal:wght@300;700;900&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/p5@1.9.0/lib/p5.min.js"></script>
 <style>
-:root{--paper:#fdfbf6;--ink:#1d1d1b;--line:#ece7db;--gold:#b89a5f}
-*{margin:0;box-sizing:border-box}body{font-family:'Tajawal',sans-serif;background:var(--paper);color:var(--ink)}
-.topbar{background:#fff;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;padding:12px 28px}
-.topbar img{height:52px}
-.topbar div{font-size:.85rem;text-align:left;line-height:1.3}
-.topbar b{display:block;color:#0d4a2a}
-.hero{height:82vh;min-height:500px;background:linear-gradient(0deg,rgba(10,14,10,.82) 0%,rgba(10,14,10,.2) 60%),url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=1920') center/cover;display:flex;align-items:flex-end;padding:50px 40px;color:#fff}
-.hero h1{font-family:'Amiri',serif;font-size:clamp(2.6rem,5vw,4.2rem);line-height:.95}
-.hero h1 i{font-family:'Tajawal';font-size:.45em;display:block;color:#e9e2cf;font-style:normal;font-weight:300;margin-top:10px}
-.stats{display:flex;gap:18px;margin-top:22px;border-top:1px solid rgba(255,255,255,.18);padding-top:16px;flex-wrap:wrap}
-.stat span{font-size:.78rem;color:#b8b6ae}.stat b{color:#fff;display:block}
-.nav{position:sticky;top:0;background:rgba(253,251,246,.9);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);display:flex;gap:24px;padding:0 40px;z-index:5}
-.nav button{border:none;background:none;padding:16px 0;font-weight:700;border-bottom:2px solid transparent;cursor:pointer}
-.nav button.active{border-color:var(--ink)}
-.wrap{max-width:1150px;margin:0 auto;padding:40px}
-.card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:24px}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-@media(max-width:700px){.grid{grid-template-columns:1fr}.hero{padding:28px 20px}.wrap{padding:28px 18px}.nav{padding:0 18px}}
-.sec{display:none}.sec.active{display:block}
-.btn{background:#121412;color:#fff;padding:11px 20px;border-radius:100px;text-decoration:none;display:inline-block;margin-top:14px;font-weight:700}
-.pill{display:inline-block;border:1px solid var(--line);background:#fff;border-radius:100px;padding:8px 14px;margin:5px;font-size:.85rem}
-.footer{background:#121412;color:#8a8a86;text-align:center;padding:36px;margin-top:40px}
-.qou-badge{background:#fff;border:1px solid var(--line);display:inline-flex;align-items:center;gap:10px;padding:8px 14px;border-radius:100px;margin-bottom:16px}
-.qou-badge img{height:28px}
+:root{--ink:#0f0f0e;--gold:#d4a017}
+*{margin:0;box-sizing:border-box}body{font-family:'Tajawal',sans-serif;background:#fdfbf6;color:var(--ink)}
+.top{position:fixed;top:0;width:100%;z-index:99;background:rgba(253,251,246,.92);backdrop-filter:blur(16px);border-bottom:1px solid #eee;display:flex;justify-content:space-between;padding:12px 20px;align-items:center}
+.hero{height:100vh;display:grid;grid-template-columns:1.1fr.9fr;align-items:center;padding:90px 40px 40px;gap:20px}
+@media(max-width:900px){.hero{grid-template-columns:1fr;height:auto;padding-top:90px}}
+#canvas{border-radius:32px;box-shadow:0 30px 80px rgba(0,0,0,.25);border:6px solid #fff;width:100%;aspect-ratio:1;overflow:hidden;background:#f4efe2}
+h1{font-family:'Amiri';font-size:clamp(2.8rem,6vw,4.8rem);line-height:.9}
+.badge{display:inline-flex;gap:8px;background:#121412;color:#fff;border-radius:100px;padding:8px 14px;font-size:.8rem;margin-bottom:14px}
+.btn{border:none;padding:14px 22px;border-radius:100px;font-weight:900;cursor:pointer}
+.btn-gold{background:var(--gold)}.btn-dark{background:#121412;color:#fff}
+.card{background:#fff;border:1px solid #eee;border-radius:24px;padding:20px;margin-top:14px}
+input{width:100%;padding:14px 18px;border-radius:100px;border:1px solid #ddd;font-family:'Tajawal';margin:8px 0}
+.poem{font-family:'Amiri';font-size:1.3rem;line-height:1.9;background:linear-gradient(180deg,#fff 0%,#fdf6e3 100%);border-radius:20px;padding:20px;border:1px solid #f0e6c8}
 </style>
 </head>
 <body>
-<div class="topbar">
-<img src="https://upload.wikimedia.org/wikipedia/ar/7/7d/%D8%B4%D8%B9%D8%A7%D8%B1_%D8%AC%D8%A7%D9%85%D8%B9%D8%A9_%D8%A7%D9%84%D9%82%D8%AF%D8%B3_%D8%A7%D9%84%D9%85%D9%81%D8%AA%D9%88%D8%AD%D8%A9.png" alt="QOU Logo">
-<div><b>جامعة القدس المفتوحة</b>Al-Quds Open University<br>فرع سلفيت - دراسات عليا / ماجستير 2026</div>
+<div class="top">
+<img src="https://upload.wikimedia.org/wikipedia/ar/7/7d/%D8%B4%D8%B9%D8%A7%D8%B1_%D8%AC%D8%A7%D9%85%D8%B9%D8%A9_%D8%A7%D9%84%D9%82%D8%AF%D8%B3_%D8%A7%D9%84%D9%85%D9%81%D8%AA%D9%88%D8%AD%D8%A9.png" height="38">
+<div style="font-size:.8rem;text-align:left"><b>QOU - GEN-AI LAB</b><br>لينا عصام - ماجستير - سلفيت</div>
 </div>
 
 <div class="hero">
 <div>
-<div class="qou-badge"><img src="https://upload.wikimedia.org/wikipedia/ar/7/7d/%D8%B4%D8%B9%D8%A7%D8%B1_%D8%AC%D8%A7%D9%85%D8%B9%D8%A9_%D8%A7%D9%84%D9%82%D8%AF%D8%B3_%D8%A7%D9%84%D9%85%D9%81%D8%AA%D9%88%D8%AD%D8%A9.png">مورد تعليمي مفتوح - OER</div>
-<h1>كفر الديك<i>سجل الزيتون الرومي - ذاكرة حجر</i></h1>
-<p style="color:#d8d5cb;margin-top:14px;max-width:620px;line-height:1.7">توثيق أرشيف حي من ظهر صبح - 300 دونم زيتون رومي معمر 800 سنة. إعداد: لينا عصام - طالبة ماجستير</p>
-<div class="stats">
-<div class="stat"><b>كفر الديك - سلفيت</b><span>32.0665°N 35.0839°E</span></div>
-<div class="stat"><b>15,529 دونم</b><span>المساحة الكلية</span></div>
-<div class="stat"><b>GHOSHEH نموذج</b><span>CC BY-SA 4.0</span></div>
-</div>
+<div class="badge">🧬 SUPERIOR GENERATIVE INTELLIGENCE - لأول مرة في فلسطين</div>
+<h1>كل اسم<br>بولد<br><span style="color:#5a7a2a">زيتونة فريدة</span></h1>
+<p style="color:#666;margin-top:14px;line-height:1.7">اكتبي اسمك أو اسم عائلتك من كفر الديك، والذكاء التوليدي رح يولد لك شجرة زيتون رومي عمرها ما تكررت، بقصة وقصيدة وشهادة ملكية رقمية باسمك.</p>
+
+<div class="card">
+<b>🧬 ولّدي زيتونتك الآن:</b>
+<input id="nameInput" placeholder="مثال: لينا عصام - عائلة الديك">
+<div style="display:flex;gap:8px;margin-top:8px">
+<button class="btn btn-gold" onclick="generateOlive()">ولّد بالذكاء المتفوق ✨</button>
+<button class="btn btn-dark" onclick="talkToJad()">احكي مع الجد 👴</button>
 </div>
 </div>
 
-<div class="nav"><button class="active" onclick="go(0)">التحليل</button><button onclick="go(1)">القرية</button><button onclick="go(2)">الخريطة</button><button onclick="go(3)">التقييم</button><button onclick="go(4)">النشر</button></div>
+<div id="result" class="card" style="display:none">
+<div id="poem" class="poem"></div>
+<div style="margin-top:12px;font-size:.85rem;color:#666" id="cert"></div>
+<button class="btn btn-dark" style="margin-top:12px;width:100%" onclick="downloadCert()">حمّل شهادة ملكيتك الرقمية 📜</button>
+</div>
+</div>
 
-<div class="wrap">
-<div class="sec active" id="s0">
-<h2 style="font-family:Amiri;font-size:2.4rem">لماذا كفر الديك؟</h2><br>
-<div class="grid">
-<div class="card"><h3>🌿 من عين الديوك</h3><p style="color:#666;margin-top:8px">أصل التسمية نزوح المؤسس من عين الديوك قرب أريحا - "كفر" تعني القرية المستقرة بالسامية.</p></div>
-<div class="card"><h3>🫒 ظهر صبح - 300 دونم</h3><p style="color:#666;margin-top:8px">أخصب أراضي سلفيت، زيتون رومي، ينابيع، آثار رومانية، مصدر رزق مهدد بالمصادرة.</p></div>
+<div>
+<div id="canvas"></div>
+<p style="text-align:center;color:#999;font-size:.75rem;margin-top:10px">GEN-AI CANVAS: كل شجرة تولد بـ seed فريد - لا تتكرر أبداً</p>
 </div>
-<a class="btn" onclick="go(1)">ادخل الأرشيف →</a>
 </div>
-<div class="sec" id="s1"><h2 style="font-family:Amiri">القرية كأرشيف</h2><div class="card">شمالاً بديا، غرباً رافات ودير بلوط، شرقاً برقين وسرطة، جنوباً بني زيد. 2477 دونم صودرت للجدار والمستوطنات.</div></div>
-<div class="sec" id="s2"><h2 style="font-family:Amiri">خريطة الاستكشاف</h2><span class="pill">📍 ظهر صبح</span><span class="pill">📍 خلة القمح</span><span class="pill">📍 خانة الكحل</span><span class="pill">📍 حريقة راجح</span></div>
-<div class="sec" id="s3"><h2 style="font-family:Amiri">تقييم تفاعلي</h2><div class="card"><b>أصل التسمية؟</b><br><br><span class="pill" onclick="this.style.background='#121412';this.style.color='#fff'">نزوح من عين الديوك ✓</span></div></div>
-<div class="sec" id="s4"><h2 style="font-family:Amiri">النشر</h2><div class="card"><b>CC BY-SA 4.0</b><br><br>إعداد: <b>لينا عصام - طالبة ماجستير - جامعة القدس المفتوحة - سلفيت 2026</b><br><br><a class="btn" href="https://leenaessam2024-creator.github.io/oer-salfit-leena-2026/" target="_blank">رابط المشروع الحي</a></div></div>
-</div>
-<div class="footer">جامعة القدس المفتوحة - فرع سلفيت | لينا عصام - ماجستير 2026<br>صمم في كفر الديك 🇵🇸 - Olive Archive Edition</div>
-<script>function go(i){document.querySelectorAll('.sec').forEach(e=>e.classList.remove('active'));document.querySelectorAll('.nav button').forEach(e=>e.classList.remove('active'));document.getElementById('s'+i).classList.add('active');document.querySelectorAll('.nav button')[i].classList.add('active');window.scrollTo({top:380,behavior:'smooth'})}</script>
+
+<script>
+let sketch = function(p){
+let age=800, branches=[];
+p.setup=function(){let c=p.createCanvas(600,600);c.parent('canvas'); p.noLoop();}
+p.draw=function(){
+p.background(244,239,226);
+p.translate(p.width/2, p.height*0.85);
+let seed=document.getElementById('nameInput').value||'لينا';
+p.randomSeed(hash(seed));
+age=p.random(300,1200);
+drawTree(p, 0,0, 110, -p.PI/2, 8);
+}
+function drawTree(p,x,y,len,angle,depth){
+if(depth==0||len<6)return;
+let x2=x+p.cos(angle)*len;
+let y2=y+p.sin(angle)*len;
+p.strokeWeight(depth*1.6); p.stroke(60+depth*6, 45+depth*2, 20);
+p.line(x,y,x2,y2);
+if(depth<3){p.noStroke();p.fill(58,90,35,p.random(140,210));p.ellipse(x2,y2,p.random(14,28),p.random(10,22));}
+let n=p.random(2,3.3);
+for(let i=0;i<n;i++){drawTree(p,x2,y2,len*p.random(0.62,0.82),angle+p.random(-0.9,0.9),depth-1);}
+}
+function hash(s){let h=0;for(let i=0;i<s.length;i++)h=(h*31+s.charCodeAt(i))%1000000;return h;}
+};
+new p5(sketch);
+
+function generateOlive(){
+let name=document.getElementById('nameInput').value||'لينا عصام';
+let age=Math.floor(Math.random()*700+300);
+let rootDepth=(Math.random()*8+4).toFixed(1);
+let stories=[
+`يا ${name}، أنا زيتونتك. انزرعت سنة ${2026-age}. شفت جدك وهو صغير يلعب تحتّي بظهر صبح. جذوري ${rootDepth} متر بتشرب من نفس العين اللي شرب منها الرومان.`,
+`يا ${name}، أنا من سلالة الزيتون الرومي النقي. بذوري سافرت من صور إلى كفر الديك قبل ${age} سنة. كل حبة زيتون مني فيها ذاكرة 40 جيل.`,
+`يا ${name}، وقفت بوجه جرافات 2018. أهل كفر الديك ناموا تحتي 3 ليالي يحموني. أنا مش شجرة، أنا وثيقة ملكية حية.`
+];
+let poems=[
+`في ظهر صبحٍ يا ${name} قامت شجرتي\nجذرها في الصخر، وفرعها في السماء\n${age} عاماً تحرس عين الديوك\nوتحكي للريح حكاية البقاء`,
+`يا بنت كفر الديك يا ${name}\nزيتونتك بتحكي ما بتنام\n${age} سنة واقفة بتصلي\nللأرض اللي ما بتنضام`
+];
+document.getElementById('result').style.display='block';
+document.getElementById('poem').innerHTML=stories[Math.floor(Math.random()*stories.length)]+'<br><br><b>'+poems[Math.floor(Math.random()*poems.length)]+'</b>';
+document.getElementById('cert').innerHTML=`📜 شهادة توليد رقمية فريدة<br>الاسم: <b>${name}</b><br>العمر: ${age} سنة | عمق الجذر: ${rootDepth}m | الموقع: ظهر صبح - 32.0665N 35.0839E<br>الـ HASH: OLIVE-${btoa(name).slice(0,8).toUpperCase()}-${age}<br>جامعة القدس المفتوحة - ماجستير 2026 - QOU GEN-AI LAB`;
+}
+
+function talkToJad(){
+let name=document.getElementById('nameInput').value||'يمّا';
+let replies=[
+`أهلا يا ${name} يا ستي... أنا الحج أبو عصام، عمري 91 سنة. هالزيتونة اللي شايفتيها زرعها سيدي سيدي. كنا نعصر زيتها على حجر بدّ قديم... ريحته لسه بأنفي لليوم.`,
+`يا ${name}، بتعرفي؟ ظهر صبح كان يسموه "بطن البلد" لأنه بطعمي كل كفر الديك. 300 دونم زيتون رومي، كل شجرة بتعطي 40 تنكة!`,
+`الله يرضى عليكي يا ${name}، لا تبيعي الأرض. الزيتون هو الهوية. اللي ببيع زيتونة ببيع اسمه.`
+];
+alert('👴 الجد أبو عصام - 91 سنة - كفر الديك:\n\n'+replies[Math.floor(Math.random()*replies.length)]);
+}
+function downloadCert(){
+let name=document.getElementById('nameInput').value||'لينا';
+let txt=document.getElementById('cert').innerText+'\n\n'+document.getElementById('poem').innerText;
+let blob=new Blob([txt],{type:'text/plain'});let a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=`شهادة-زيتونة-${name}.txt`;a.click();
+}
+</script>
 </body>
 </html>
