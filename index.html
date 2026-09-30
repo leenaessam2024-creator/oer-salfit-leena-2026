@@ -1,132 +1,72 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>كفر الديك — سجل الزيتون الرومي | لينا عصام</title>
-<link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>كفر الديك - سجل الزيتون الرومي | لينا عصام - ماجستير</title>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@300;400;700;800&display=swap" rel="stylesheet">
 <style>
-:root{--ink:#121212;--paper:#fcfaf6;--line:#ede8dd;--olive:#232f23;--gold:#b79a5f;--sage:#8a9a82;--muted:#8b8a86}
-*{margin:0;box-sizing:border-box}html{scroll-behavior:smooth}
-body{font-family:'Tajawal',sans-serif;background:var(--paper);color:var(--ink);line-height:1.9;letter-spacing:-.01em}
-.flag{height:3px;background:linear-gradient(90deg,#000 0 33%,#fff 33% 66%,#009639 66% 84%,#ce1126 84% 100%)}
-header{background:var(--ink);color:#f5f2eb;position:relative;overflow:hidden}
-header::before{content:'';position:absolute;inset:0;background:radial-gradient(800px 500px at 80% -20%,rgba(183,154,95,.18),transparent),radial-gradient(600px 400px at 10% 120%,rgba(138,154,130,.2),transparent);pointer-events:none}
-.hero{max-width:1320px;margin:0 auto;padding:90px 48px 78px;display:grid;grid-template-columns:1.2fr.8fr;gap:70px;position:relative}
-@media(max-width:980px){.hero{grid-template-columns:1fr;padding:56px 24px 50px;gap:36px}}
-.kicker{display:flex;align-items:center;gap:12px;font-size:.72rem;letter-spacing:.22em;font-weight:800;color:var(--gold);text-transform:uppercase;margin-bottom:22px}
-.kicker::before{content:'';width:22px;height:1px;background:var(--gold)}
-h1.main{font-family:'Amiri',serif;font-size:clamp(2.8rem,5vw,4.4rem);line-height:.92;font-weight:700;letter-spacing:-.02em}
-h1.main em{font-style:italic;font-weight:400;color:#c7c4b8;display:block;font-size:.55em;margin-top:14px;letter-spacing:0}
-.lead{margin-top:22px;color:#a9a7a2;font-size:1.18rem;font-weight:300;max-width:560px;line-height:1.8}
-.stats{margin-top:38px;display:grid;grid-template-columns:repeat(2,1fr);gap:0;border-top:1px solid #222}
-.stat{padding:18px 0 18px 18px;border-bottom:1px solid #1e1e1e;border-left:1px solid #1e1e1e}
-.stat:nth-child(2n){border-left:none}.stat b{display:block;font-size:.92rem;color:#fff;letter-spacing:.02em}.stat span{font-size:.78rem;color:#7a7a76}
-.panel{background:linear-gradient(180deg,#1c211c,#181c18);border:1px solid #2a302a;border-radius:24px;padding:30px 28px;box-shadow:0 30px 80px rgba(0,0,0,.45),inset 0 1px 0 rgba(255,255,255,.06);position:relative}
-.panel::after{content:'🫒';position:absolute;left:22px;top:22px;font-size:1.2rem;opacity:.5}
-.panel.qt{font-family:'Amiri',serif;font-size:1.45rem;line-height:1.55;color:#e9e5d8}
-.panel.sub{margin-top:18px;color:#9a9a94;font-size:.9rem;line-height:1.7}
-.sticky{position:sticky;top:0;z-index:20;background:rgba(252,250,246,.8);backdrop-filter:blur(22px) saturate(1.2);border-bottom:1px solid var(--line)}
-.nav{max-width:1320px;margin:0 auto;display:flex;gap:36px;padding:0 48px;overflow:auto}
-@media(max-width:600px){.nav{padding:0 24px;gap:24px}}
-.nav button{background:none;border:none;padding:22px 0;font-size:.86rem;font-weight:700;color:var(--muted);border-bottom:2px solid transparent;cursor:pointer;letter-spacing:.06em;white-space:nowrap;transition:.25s}
-.nav button.active{color:var(--ink);border-bottom-color:var(--ink)}
-.nav button:hover{color:var(--ink)}
-.wrap{max-width:1320px;margin:0 auto;padding:56px 48px}
-@media(max-width:600px){.wrap{padding:36px 20px}}
-.sec{display:none}.sec.active{display:block;animation:rise.6s cubic-bezier(.16,1,.3,1)}
-@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
-.eyebrow{font-size:.7rem;letter-spacing:.22em;font-weight:800;color:var(--gold);text-transform:uppercase;margin-bottom:14px}
-h2.big{font-family:'Amiri',serif;font-size:clamp(2rem,3.5vw,3rem);line-height:1.05;letter-spacing:-.02em;margin-bottom:26px}
-.card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:28px;transition:.35s;box-shadow:0 1px 0 rgba(0,0,0,.02)}
-.card:hover{transform:translateY(-2px);box-shadow:0 12px 40px rgba(0,0,0,.06);border-color:#ddd6c6}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
-@media(max-width:860px){.grid{grid-template-columns:1fr}}
-.note{border-right:2px solid var(--gold);padding-right:18px;margin:18px 0;color:#5a5955;font-family:'Amiri',serif;font-size:1.1rem;background:#fdfbf6;padding:16px 18px;border-radius:0 12px 12px 0}
-.pill{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);background:#fff;border-radius:999px;padding:10px 16px;font-size:.85rem;font-weight:500;cursor:pointer;transition:.25s;margin:8px 8px 0 0}
-.pill:hover{border-color:var(--ink);background:var(--ink);color:#fff;transform:translateY(-1px)}
-.btn{display:inline-flex;align-items:center;gap:10px;background:var(--ink);color:#fff;border-radius:999px;padding:14px 26px;font-weight:700;font-size:.9rem;text-decoration:none;border:none;cursor:pointer;transition:.25s;margin-top:22px}
-.btn:hover{background:#000;transform:translateY(-1px);box-shadow:0 8px 20px rgba(0,0,0,.18)}
-.footer{background:var(--ink);color:#7c7b77;padding:56px 48px;text-align:center}
-.footer strong{color:#fff;letter-spacing:.02em}
-.small{font-size:.82rem;color:#8a8a86}
-.tatreez{height:18px;background:repeating-linear-gradient(90deg,var(--gold) 0 2px,transparent 2px 10px,rgba(0,0,0,.15) 10px 11px,transparent 11px 22px);opacity:.18;margin:24px 0;border-radius:2px}
+:root{--paper:#fdfbf6;--ink:#1d1d1b;--line:#ece7db;--gold:#b89a5f}
+*{margin:0;box-sizing:border-box}body{font-family:'Tajawal',sans-serif;background:var(--paper);color:var(--ink)}
+.topbar{background:#fff;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;padding:12px 28px}
+.topbar img{height:52px}
+.topbar div{font-size:.85rem;text-align:left;line-height:1.3}
+.topbar b{display:block;color:#0d4a2a}
+.hero{height:82vh;min-height:500px;background:linear-gradient(0deg,rgba(10,14,10,.82) 0%,rgba(10,14,10,.2) 60%),url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=1920') center/cover;display:flex;align-items:flex-end;padding:50px 40px;color:#fff}
+.hero h1{font-family:'Amiri',serif;font-size:clamp(2.6rem,5vw,4.2rem);line-height:.95}
+.hero h1 i{font-family:'Tajawal';font-size:.45em;display:block;color:#e9e2cf;font-style:normal;font-weight:300;margin-top:10px}
+.stats{display:flex;gap:18px;margin-top:22px;border-top:1px solid rgba(255,255,255,.18);padding-top:16px;flex-wrap:wrap}
+.stat span{font-size:.78rem;color:#b8b6ae}.stat b{color:#fff;display:block}
+.nav{position:sticky;top:0;background:rgba(253,251,246,.9);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);display:flex;gap:24px;padding:0 40px;z-index:5}
+.nav button{border:none;background:none;padding:16px 0;font-weight:700;border-bottom:2px solid transparent;cursor:pointer}
+.nav button.active{border-color:var(--ink)}
+.wrap{max-width:1150px;margin:0 auto;padding:40px}
+.card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:24px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:700px){.grid{grid-template-columns:1fr}.hero{padding:28px 20px}.wrap{padding:28px 18px}.nav{padding:0 18px}}
+.sec{display:none}.sec.active{display:block}
+.btn{background:#121412;color:#fff;padding:11px 20px;border-radius:100px;text-decoration:none;display:inline-block;margin-top:14px;font-weight:700}
+.pill{display:inline-block;border:1px solid var(--line);background:#fff;border-radius:100px;padding:8px 14px;margin:5px;font-size:.85rem}
+.footer{background:#121412;color:#8a8a86;text-align:center;padding:36px;margin-top:40px}
+.qou-badge{background:#fff;border:1px solid var(--line);display:inline-flex;align-items:center;gap:10px;padding:8px 14px;border-radius:100px;margin-bottom:16px}
+.qou-badge img{height:28px}
 </style>
 </head>
 <body>
-<div class="flag"></div>
-<header>
+<div class="topbar">
+<img src="https://upload.wikimedia.org/wikipedia/ar/7/7d/%D8%B4%D8%B9%D8%A7%D8%B1_%D8%AC%D8%A7%D9%85%D8%B9%D8%A9_%D8%A7%D9%84%D9%82%D8%AF%D8%B3_%D8%A7%D9%84%D9%85%D9%81%D8%AA%D9%88%D8%AD%D8%A9.png" alt="QOU Logo">
+<div><b>جامعة القدس المفتوحة</b>Al-Quds Open University<br>فرع سلفيت - دراسات عليا / ماجستير 2026</div>
+</div>
+
 <div class="hero">
 <div>
-<div class="kicker">Kafr ad-Dik • Archive No.01 • Salfit 2026</div>
-<h1 class="main">كفر الديك<em>سجلّ الزيتون الرومي — ذاكرة حجر</em></h1>
-<p class="lead">مورد تعليمي مفتوح ليس عن القرية، بل <span style="color:#e8e2d1;font-weight:500">من داخلها</span>. يوثق التسمية من عين الديوك، ظهر صبح بـ 300 دونم زيتون رومي، والسناسل التي تحفظ الأرض من النسيان.</p>
+<div class="qou-badge"><img src="https://upload.wikimedia.org/wikipedia/ar/7/7d/%D8%B4%D8%B9%D8%A7%D8%B1_%D8%AC%D8%A7%D9%85%D8%B9%D8%A9_%D8%A7%D9%84%D9%82%D8%AF%D8%B3_%D8%A7%D9%84%D9%85%D9%81%D8%AA%D9%88%D8%AD%D8%A9.png">مورد تعليمي مفتوح - OER</div>
+<h1>كفر الديك<i>سجل الزيتون الرومي - ذاكرة حجر</i></h1>
+<p style="color:#d8d5cb;margin-top:14px;max-width:620px;line-height:1.7">توثيق أرشيف حي من ظهر صبح - 300 دونم زيتون رومي معمر 800 سنة. إعداد: لينا عصام - طالبة ماجستير</p>
 <div class="stats">
-<div class="stat"><b>15 كم غرب سلفيت</b><span>32.0665°N / 35.0839°E</span></div>
-<div class="stat"><b>15,529 دونم</b><span>إجمالي المساحة</span></div>
-<div class="stat"><b>5,551 نسمة</b><span>تعداد 2017</span></div>
-<div class="stat"><b>390 متر</b><span>متوسط ارتفاع</span></div>
+<div class="stat"><b>كفر الديك - سلفيت</b><span>32.0665°N 35.0839°E</span></div>
+<div class="stat"><b>15,529 دونم</b><span>المساحة الكلية</span></div>
+<div class="stat"><b>GHOSHEH نموذج</b><span>CC BY-SA 4.0</span></div>
 </div>
 </div>
-<div class="panel">
-<div class="kicker" style="margin-bottom:16px">Designer Statement</div>
-<div class="qt">“في كفر الديك، الجغرافيا لا تُدرّس. تُلمس. كل حجر في السنسلة هو حرف، وكل زيتونة رومية عمرها 800 سنة هي فقرة.”</div>
-<div class="sub">إعداد: <b style="color:#e9e5d8">لينا عصام</b> — جامعة القدس المفتوحة، فرع سلفيت<br>نموذج GHOSHEH • رخصة CC BY-SA 4.0 مفتوحة<br>إهداء لمعلمي محافظة سلفيت</div>
-<div class="tatreez"></div>
-<div class="small">الحدود: بديا شمالاً • رافات ودير بلوط غرباً • برقين وسرطة شرقاً • بني زيد جنوباً</div>
 </div>
-</div>
-</header>
 
-<div class="sticky"><div class="nav">
-<button class="active" onclick="go(0)">01 التحليل</button>
-<button onclick="go(1)">02 الأرشيف الحي</button>
-<button onclick="go(2)">03 مختبر الحقل</button>
-<button onclick="go(3)">04 التقييم</button>
-<button onclick="go(4)">05 النشر المفتوح</button>
-</div></div>
+<div class="nav"><button class="active" onclick="go(0)">التحليل</button><button onclick="go(1)">القرية</button><button onclick="go(2)">الخريطة</button><button onclick="go(3)">التقييم</button><button onclick="go(4)">النشر</button></div>
 
 <div class="wrap">
 <div class="sec active" id="s0">
-<div class="eyebrow">01 — Why This Village</div>
-<h2 class="big">المشكلة: نُدرّس الجغرافيا كتعريف، وننسى أنها حكاية نزوح وصمود.</h2>
+<h2 style="font-family:Amiri;font-size:2.4rem">لماذا كفر الديك؟</h2><br>
 <div class="grid">
-<div class="card"><div class="eyebrow">التسمية</div><h3 style="font-family:'Amiri',serif;font-size:1.5rem">من عين الديوك إلى كفر الديك</h3><p class="small" style="margin-top:12px;color:#5a5a57">كلمة "كفر" سامية قديمة تعني القرية المستقرة. نزح المؤسس من عين الديوك قرب أريحا. هذا ليس معلومة، بل مسار هجرة داخلية.</p><div class="note">الطالب يحفظ "كفر = قرية" ولا يعرف لماذا ترك جده الواحة وجاء إلى الجبل.</div></div>
-<div class="card"><div class="eyebrow">الثروة المهددة</div><h3 style="font-family:'Amiri',serif;font-size:1.5rem">ظهر صبح: 300 دونم من الزمن</h3><p class="small" style="margin-top:12px;color:#5a5a57">من أخصب أراضي سلفيت. زيتون رومي معمّر، ينابيع، خرب رومانية. مصدر دخل لمئات العائلات. صودر منها 2477 دونم: 1225 مستعمرات، 362 طرق التفافية، 890 جدار.</p></div>
+<div class="card"><h3>🌿 من عين الديوك</h3><p style="color:#666;margin-top:8px">أصل التسمية نزوح المؤسس من عين الديوك قرب أريحا - "كفر" تعني القرية المستقرة بالسامية.</p></div>
+<div class="card"><h3>🫒 ظهر صبح - 300 دونم</h3><p style="color:#666;margin-top:8px">أخصب أراضي سلفيت، زيتون رومي، ينابيع، آثار رومانية، مصدر رزق مهدد بالمصادرة.</p></div>
 </div>
-<a class="btn" onclick="go(1)">ادخل الأرشيف الحي →</a>
+<a class="btn" onclick="go(1)">ادخل الأرشيف →</a>
 </div>
-
-<div class="sec" id="s1">
-<div class="eyebrow">02 — Living Archive</div>
-<h2 class="big">كفر الديك ليست نقطة على الخريطة، بل طبقات.</h2>
-<div class="card"><p><b>الخرب والينابيع:</b> بقايا مبانٍ، آبار وصهاريج رومانية، حجارة أثرية تشهد على استمرارية عربية عمرها آلاف السنين. أكثر من 1.5 مليون شجرة زيتون في سلفيت، وكفر الديك قلبها النابض.</p></div>
+<div class="sec" id="s1"><h2 style="font-family:Amiri">القرية كأرشيف</h2><div class="card">شمالاً بديا، غرباً رافات ودير بلوط، شرقاً برقين وسرطة، جنوباً بني زيد. 2477 دونم صودرت للجدار والمستوطنات.</div></div>
+<div class="sec" id="s2"><h2 style="font-family:Amiri">خريطة الاستكشاف</h2><span class="pill">📍 ظهر صبح</span><span class="pill">📍 خلة القمح</span><span class="pill">📍 خانة الكحل</span><span class="pill">📍 حريقة راجح</span></div>
+<div class="sec" id="s3"><h2 style="font-family:Amiri">تقييم تفاعلي</h2><div class="card"><b>أصل التسمية؟</b><br><br><span class="pill" onclick="this.style.background='#121412';this.style.color='#fff'">نزوح من عين الديوك ✓</span></div></div>
+<div class="sec" id="s4"><h2 style="font-family:Amiri">النشر</h2><div class="card"><b>CC BY-SA 4.0</b><br><br>إعداد: <b>لينا عصام - طالبة ماجستير - جامعة القدس المفتوحة - سلفيت 2026</b><br><br><a class="btn" href="https://leenaessam2024-creator.github.io/oer-salfit-leena-2026/" target="_blank">رابط المشروع الحي</a></div></div>
 </div>
-
-<div class="sec" id="s2">
-<div class="eyebrow">03 — Field Lab</div>
-<h2 class="big">خريطة الاستكشاف — امشيها، لا تحفظها.</h2>
-<div class="pill">📍 ظهر صبح — القلب</div>
-<div class="pill">📍 خلة القمح — شمال</div>
-<div class="pill">📍 خانة الكحل — شرق بروخين</div>
-<div class="pill">📍 حريقة راجح — مهددة</div>
-<div class="card" style="margin-top:22px"><div class="eyebrow">مهمة OER حقيقية</div><p>سجلي صوت جدتك 90 ثانية: "كيف كان القطاف قبل 40 سنة؟" ارفعيه كرابط. هذا هو المورد المفتوح، ليس PDF.</p></div>
-</div>
-
-<div class="sec" id="s3">
-<div class="eyebrow">04 — Assessment</div>
-<h2 class="big">تقييم بلا تلقين.</h2>
-<div class="card"><p><b>من أين جاءت تسمية كفر الديك؟</b></p><div class="pill" onclick="this.style.background='#121212';this.style.color='#fff'">نزوح المؤسس من عين الديوك ✓</div><p style="margin-top:20px"><b>ما مساحة ظهر صبح المميزة؟</b></p><div class="pill" onclick="this.style.background='#121212';this.style.color='#fff'">300 دونم زيتون رومي ✓</div></div>
-</div>
-
-<div class="sec" id="s4">
-<div class="eyebrow">05 — Open</div>
-<h2 class="big">CC BY-SA 4.0 — هذا الإرث ليس ملكي، بل ملك سلفيت.</h2>
-<div class="card"><p>الاستخدام، التعديل، والترجمة مسموحة مع ذكر المصدر.</p><p class="small" style="margin-top:14px">الرابط الحي: <b>leenaessam2024-creator.github.io/oer-salfit-leena-2026/</b><br>الكود: github.com/leenaessam2024-creator/oer-salfit-leena-2026<br>الإحداثيات: 32.0665°N 35.0839°E</p><a class="btn" href="https://wa.me/?text=أرشيف كفر الديك - سجل الزيتون الرومي: https://leenaessam2024-creator.github.io/oer-salfit-leena-2026/" target="_blank">مشاركة واتساب →</a></div>
-</div>
-</div>
-
-<div class="footer"><strong>صمم بفخر في كفر الديك — سلفيت 🇵🇸</strong><br><span class="small">لينا عصام • جامعة القدس المفتوحة • 2026 • تصميم: BLACK & STONE Edition • هوية فلسطينية عالمية</span></div>
-<script>function go(i){document.querySelectorAll('.sec').forEach(s=>s.classList.remove('active'));document.querySelectorAll('.nav button').forEach(b=>b.classList.remove('active'));document.getElementById('s'+i).classList.add('active');document.querySelectorAll('.nav button')[i].classList.add('active');window.scrollTo({top:540,behavior:'smooth'})}</script>
+<div class="footer">جامعة القدس المفتوحة - فرع سلفيت | لينا عصام - ماجستير 2026<br>صمم في كفر الديك 🇵🇸 - Olive Archive Edition</div>
+<script>function go(i){document.querySelectorAll('.sec').forEach(e=>e.classList.remove('active'));document.querySelectorAll('.nav button').forEach(e=>e.classList.remove('active'));document.getElementById('s'+i).classList.add('active');document.querySelectorAll('.nav button')[i].classList.add('active');window.scrollTo({top:380,behavior:'smooth'})}</script>
 </body>
 </html>
