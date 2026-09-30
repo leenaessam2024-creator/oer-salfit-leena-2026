@@ -3,69 +3,117 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>OER سلفيت - لينا عصام 2026</title>
+<title>كفر الديك - OER سلفيت | لينا عصام 2026</title>
 <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
 <style>
 *{font-family:'Tajawal',sans-serif;box-sizing:border-box}
 body{margin:0;background:#f8fafc;color:#1e293b}
-header{background:linear-gradient(135deg,#065f46,#10b981);color:white;padding:40px 20px;text-align:center}
-.badge{background:#fbbf24;color:#000;padding:5px 12px;border-radius:20px;font-weight:bold;display:inline-block;margin-top:10px}
-.container{max-width:900px;margin:-30px auto 40px;background:white;border-radius:16px;box-shadow:0 10px 30px rgba(0,0,0,.1);overflow:hidden}
+header{background:linear-gradient(135deg,#064e3b,#059669);color:white;padding:50px 20px;text-align:center}
+.badge{background:#fbbf24;color:#000;padding:6px 14px;border-radius:20px;font-weight:bold;display:inline-block;margin:8px}
+.container{max-width:950px;margin:-30px auto 40px;background:white;border-radius:16px;box-shadow:0 10px 30px rgba(0,0,0,.1);overflow:hidden}
 .nav{display:flex;flex-wrap:wrap;background:#f1f5f9}
-.nav button{flex:1;padding:15px;border:none;background:transparent;cursor:pointer;font-weight:bold;border-bottom:3px solid transparent;min-width:120px}
-.nav button.active{border-bottom-color:#10b981;background:white;color:#065f46}
+.nav button{flex:1;padding:15px;border:none;background:transparent;cursor:pointer;font-weight:bold;border-bottom:3px solid transparent;min-width:110px}
+.nav button.active{border-bottom-color:#059669;background:white;color:#064e3b}
 .section{padding:30px;display:none}
 .section.active{display:block}
 .card{background:#f0fdf4;border:1px solid #bbf7d0;padding:20px;border-radius:12px;margin:15px 0}
+.stat{display:inline-block;background:white;border:1px solid #d1fae5;padding:10px 15px;border-radius:10px;margin:5px;font-weight:bold}
 .quiz-option{padding:12px;border:2px solid #e2e8f0;border-radius:8px;margin:8px 0;cursor:pointer}
-.quiz-option:hover{border-color:#10b981;background:#ecfdf5}
-.quiz-option.correct{background:#dcfce7;border-color:#22c55e}
-.quiz-option.wrong{background:#fee2e2;border-color:#ef4444}
-.btn{background:#065f46;color:white;padding:12px 24px;border:none;border-radius:8px;cursor:pointer;font-weight:bold}
-.footer{text-align:center;padding:20px;background:#1e293b;color:white}
-.footer a{color:#34d399}
+.quiz-option:hover{border-color:#059669;background:#ecfdf5}
+.btn{background:#064e3b;color:white;padding:12px 24px;border:none;border-radius:8px;cursor:pointer;font-weight:bold;margin:5px}
+.footer{text-align:center;padding:25px;background:#1e293b;color:white}
 </style>
 </head>
 <body>
 <header>
-<h1>🌿 سلفيت: التعليم من قلب الزيتون</h1>
-<p>مورد تعليمي مفتوح - إعداد: لينا عصام - جامعة القدس المفتوحة - فرع سلفيت 2026</p>
-<div class="badge">مبني على نموذج GHOSHEH الفائز بجائزة التميز العالمية 2026 🏆</div>
+<h1>🫒 كفر الديك - قلب سلفيت النابض</h1>
+<p>مورد تعليمي مفتوح OER | إعداد: لينا عصام - جامعة القدس المفتوحة - فرع سلفيت 2026</p>
+<div class="badge">الموقع: 15 كم غرب سلفيت</div>
+<div class="badge">المساحة: 15,529 دونم</div>
+<div class="badge">السكان: 5,551 نسمة</div>
+<div class="badge">الارتفاع: 390 م عن سطح البحر</div>
 </header>
 <div class="container">
 <div class="nav">
-<button class="active" onclick="show(0)">1- التحليل</button>
-<button onclick="show(1)">2- الأنشطة</button>
-<button onclick="show(2)">3- التقييم</button>
-<button onclick="show(3)">4- المشاركة</button>
+<button class="active" onclick="show(0)">التحليل</button>
+<button onclick="show(1)">كفر الديك</button>
+<button onclick="show(2)">الأنشطة</button>
+<button onclick="show(3)">التقييم</button>
+<button onclick="show(4)">المشاركة</button>
 </div>
+
 <div class="section active" id="s0">
-<h2>المرحلة 1: التحليل</h2>
-<div class="card"><h3>🎯 قرية فرخة - سلفيت</h3><p><b>الاحتياجات:</b> ضعف التفاعل مع الجغرافيا المحلية.</p><p><b>الهدف:</b> تحويل الدرس إلى استكشاف تفاعلي يربط الطالب بأرضه.</p></div>
-<button class="btn" onclick="show(1)">التالي →</button>
+<h2>1- التحليل: لماذا كفر الديك؟</h2>
+<div class="card">
+<h3>🎯 التسمية والأصالة</h3>
+<p>سميت نسبة لنزوح أحد مؤسسيها من <b>عين الديوك قرب أريحا</b>. كلمة "كفر" كلمة سامية قديمة تعني القرية.</p>
+<p><b>المشكلة التعليمية:</b> الطلاب لا يعرفون تاريخ قريتهم المرتبط بالزيتون الرومي المعمّر والينابيع والآثار الرومانية والإسلامية.</p>
+<p><b>الحل:</b> تحويل منهج الجغرافيا إلى استكشاف ميداني رقمي من قلب كفر الديك.</p>
 </div>
+<div class="stat">📍 يحدها: بديا شمالاً</div><div class="stat">📍 رافات ودير بلوط غرباً</div><div class="stat">📍 برقين وسرطة شرقاً</div>
+<button class="btn" onclick="show(1)">تعرف على قريتك →</button>
+</div>
+
 <div class="section" id="s1">
-<h2>المرحلة 2: الأنشطة</h2>
-<div class="card"><h3>🫒 خريطة الزيتون</h3>
-<div class="quiz-option" onclick="alert('فرخة: زيتون رومي عمره 2000 سنة!')">📍 فرخة</div>
-<div class="quiz-option" onclick="alert('ديراستيا: معصرة أثرية')">📍 ديراستيا</div>
-<div class="quiz-option" onclick="alert('سلفيت: مركز تعليمي')">📍 سلفيت</div>
+<h2>2- كفر الديك: كنز سلفيت الزراعي</h2>
+<div class="card">
+<h3>🌿 منطقة ظهر صبح - الكنز الاستراتيجي</h3>
+<p>مساحتها 300 دونم، مزروعة بالزيتون الرومي المعمّر الفريد من نوعه في فلسطين، ووفرة ينابيع وآثار رومانية وإسلامية تشهد على عروبة الأرض.</p>
+<p><b>عدد الأشجار:</b> أكثر من 1.5 مليون شجرة زيتون في محافظة سلفيت، وكفر الديك جزء أساسي منها.</p>
 </div>
-<button class="btn" onclick="show(2)">التالي →</button>
+<div class="card">
+<h3>🗺️ الخرب والمواقع التاريخية</h3>
+<p>تضم بقايا مبانٍ قديمة وآبار وصهاريج لتجميع المياه تدل على استمرارية الاستيطان البشري منذ آلاف السنين.</p>
 </div>
+<button class="btn" onclick="show(2)">الأنشطة التفاعلية →</button>
+</div>
+
 <div class="section" id="s2">
-<h2>المرحلة 3: التقييم التكويني</h2>
-<h3>كم عدد أشجار الزيتون في سلفيت؟</h3>
-<div class="quiz-option" onclick="this.classList.add('wrong')">500 ألف</div>
-<div class="quiz-option" onclick="this.classList.add('correct');document.getElementById('fb').style.display='block'">أكثر من 1.5 مليون</div>
-<p id="fb" style="display:none">✅ صح! سلفيت عاصمة الزيتون!</p>
+<h2>3- الأنشطة التفاعلية</h2>
+<div class="card">
+<h3>📍 خريطة الاستكشاف</h3>
+<div class="quiz-option" onclick="alert('ظهر صبح: 300 دونم زيتون رومي معمّر + ينابيع!')">1- ظهر صبح (القلب الزراعي)</div>
+<div class="quiz-option" onclick="alert('كرم علي أحمد: أراضي خصبة مهددة')">2- كرم علي أحمد</div>
+<div class="quiz-option" onclick="alert('خلة القمح: شمال البلدة - أراضي زيتون')">3- خلة القمح</div>
+<div class="quiz-option" onclick="alert('خانة الكحل: شرق كفر الديك')">4- خانة الكحل</div>
 </div>
+<div class="card">
+<h3>🎥 مهمة الفيديو</h3>
+<p>صوري فيديو 2 دقيقة مع جدك/جدتك عن موسم قطاف الزيتون في كفر الديك وارفَعيه هنا (رابط يوتيوب).</p>
+</div>
+<button class="btn" onclick="show(3)">اختبر نفسك →</button>
+</div>
+
 <div class="section" id="s3">
-<h2>المرحلة 4: المشاركة المفتوحة</h2>
-<div class="card"><h3>🔓 CC BY-SA 4.0</h3><p>يمكن لأي معلم إعادة الاستخدام مع ذكر المؤلف لينا عصام.</p><p><b>الرابط الرسمي لمشروعك:</b><br>https://leenaessam2024-creator.github.io/oer-salfit-leena-2026/</p></div>
+<h2>4- التقييم التكويني</h2>
+<h3>ما سبب تسمية كفر الديك بهذا الاسم؟</h3>
+<div class="quiz-option" onclick="this.classList.add('wrong')">نسبة لنوع من الدجاج</div>
+<div class="quiz-option" onclick="this.classList.add('correct');document.getElementById('fb1').style.display='block'">نسبة لنزوح مؤسسها من عين الديوك قرب أريحا</div>
+<p id="fb1" style="display:none">✅ صح! أحسنت يا ابن/بنت كفر الديك الأصيلة!</p>
+
+<h3>كم تبلغ مساحة كفر الديك الإجمالية؟</h3>
+<div class="quiz-option" onclick="this.classList.add('correct');document.getElementById('fb2').style.display='block'">15,529 دونم</div>
+<div class="quiz-option" onclick="this.classList.add('wrong')">5,551 دونم</div>
+<p id="fb2" style="display:none">✅ ممتاز! 791 دونم منها مسطح بناء والباقي زراعي!</p>
+</div>
+
+<div class="section" id="s4">
+<h2>5- المشاركة برخصة مفتوحة</h2>
+<div class="card">
+<h3>🔓 CC BY-SA 4.0 - إهداء لكفر الديك</h3>
+<p>هذا المورد مفتوح لكل معلمي سلفيت. يمكن إعادة الاستخدام والتعديل مع ذكر المصدر:</p>
+<p><b>إعداد:</b> لينا عصام - جامعة القدس المفتوحة - فرع سلفيت - 2026</p>
+<p><b>القرية:</b> كفر الديك - محافظة سلفيت - فلسطين</p>
+<p><b>الرابط الرسمي:</b><br>https://leenaessam2024-creator.github.io/oer-salfit-leena-2026/</p>
+<p><b>رابط الملفات:</b><br>https://github.com/leenaessam2024-creator/oer-salfit-leena-2026</p>
+</div>
+<button class="btn" onclick="window.open('https://wa.me/?text='+encodeURIComponent('شوف مشروع كفر الديك: https://leenaessam2024-creator.github.io/oer-salfit-leena-2026/'))">شارك عبر واتساب</button>
 </div>
 </div>
-<div class="footer"><p>صمم بفخر في فلسطين 🇵🇸 | GHOSHEH Model 2026</p></div>
+<div class="footer">
+<p>صمم بفخر في كفر الديك - سلفيت 🇵🇸 | نموذج GHOSHEH للتميز 2026</p>
+<p>إحداثيات: 32.0665°N 35.0839°E | الرمز البريدي 399</p>
+</div>
 <script>
 function show(i){document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));document.querySelectorAll('.nav button').forEach(b=>b.classList.remove('active'));document.getElementById('s'+i).classList.add('active');document.querySelectorAll('.nav button')[i].classList.add('active');}
 </script>
